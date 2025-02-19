@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact • Bence Barens</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/" />
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/" />
+</head>
+<body>
+<header>
+    <nav>
+    <ul>
+        <li><a href="../index.html"><img src="../../img/logo.svg" alt="" width="50rem"></a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Contact</a></li>
+    </ul>
+    </nav>
+    <div class="language-switcher">
+        <a href="#" id="switch-lang">English</a>
+    </div>
+</header>
+<main class="contact">
+    <div>
+        <h1>Let's make something beautiful together.</h1>
+        <section>
+            Email
+            <ul>
+                <li><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></li>
+            </ul>
+            Instagram
+            <ul>
+                <li>@<a href="https://www.instagram.com/madebybence">madebybence</a></li>
+                <li>@<a href="https://www.instagram.com/bencebarens">bencebarens</a></li>
+            </ul>
+            LinkedIn
+            <ul>
+                <li>@<a href="https://www.linkedin.com/company/madebybence">madebybence</a></li>
+                <li>@<a href="https://www.linkedin.com/in/bencebarens/">bencebarens</a></li>
+            </ul>
+            Business
+            <ul>
+                <li>CoC: 93199961</li>
+                <li>VAT: NL005009425B72</li>
+            </ul>
+        </section>
+    </div>
+    <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse">
+
+        <label for="entry.119957155">01. What is your name?</label>
+        <input type="text" name="entry.119957155" placeholder="Michael Scott" required>
+
+        <label for="entry.893515591">02. What is your e-mail adress?</label>
+        <input type="email" name="entry.893515591" placeholder="m.scott@dundermifflin.nl" required>
+
+        <label for="entry.364263748">03. For what company or project do you need my services?</label>
+        <input type="text" name="entry.364263748" placeholder="Dunder Mifflin Paper Company, Inc." required>
+
+        <label for="entry.74498222">04. What services are you looking for?</label>
+        <input type="text" name="entry.74498222" placeholder="Web design, graphic design, etc." required>
+
+        <label for="entry.410020173">05. Your message</label>
+        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, can you help me with..." required rows="3"></textarea>
+
+        <button type="submit">Send!</button>
+
+    </form>
+
+    <p id="responseMessage" style="display:none; color: green;">Bedankt! Je bericht is verzonden.</p>
+
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        this.style.display = "none";
+        document.getElementById("responseMessage").style.display = "block";
+        this.submit();
+    });
+    </script>
+
+</main>
+<footer>
+
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let langSwitch = document.getElementById("switch-lang");
+        let currentPath = window.location.pathname;
+
+        if (currentPath.startsWith("/en/")) {
+            langSwitch.href = currentPath.replace("/en/", "/");
+            langSwitch.textContent = "Nederlands";
+        } else {
+            langSwitch.href = "/en" + currentPath;
+            langSwitch.textContent = "English";
+        }
+    });
+</script>
+</body>
+</html>
