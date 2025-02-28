@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact • Bence Barens</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
-    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/" />
-    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/" />
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/">
 </head>
-<body>
+<body class="contact">
 <header>
     <nav>
-    <ul>
-        <li><a href="../index.html"><img src="../../img/logo.svg" alt="" width="50rem"></a></li>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="index.html">Contact</a></li>
-    </ul>
+        <ul>
+            <li><a href="/en/index.html"><img src="/img/logo.svg" alt="" width="50"></a></li>
+            <li><a href="/en/index.html">Home</a></li>
+            <li><a href="/en/design/index.html">Portfolio</a></li>
+            <li><a href="/en/about/index.html">About</a></li>
+            <li><a href="/en/contact/index.html">Contact</a></li>
+        </ul>
     </nav>
     <div class="language-switcher">
-        <a href="#" id="switch-lang">English</a>
+        <a href="#" id="switch-lang">
+            <img src="/img/nl.svg" alt="Switch Language" id="flag-icon">
+        </a>
     </div>
 </header>
-<main class="contact">
+<main>
     <div>
         <h1>Let's make something beautiful together.</h1>
         <section>
-            Email
+            <p class="label">Email</p>
             <ul>
                 <li><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></li>
             </ul>
-            Instagram
+            <p class="label">Instagram</p>
             <ul>
                 <li>@<a href="https://www.instagram.com/madebybence">madebybence</a></li>
                 <li>@<a href="https://www.instagram.com/bencebarens">bencebarens</a></li>
             </ul>
-            LinkedIn
+            <p class="label">LinkedIn</p>
             <ul>
                 <li>@<a href="https://www.linkedin.com/company/madebybence">madebybence</a></li>
                 <li>@<a href="https://www.linkedin.com/in/bencebarens/">bencebarens</a></li>
             </ul>
-            Business
+            <p class="label">Company</p>
             <ul>
                 <li>CoC: 93199961</li>
                 <li>VAT: NL005009425B72</li>
@@ -62,40 +66,42 @@
         <input type="text" name="entry.74498222" placeholder="Web design, graphic design, etc." required>
 
         <label for="entry.410020173">05. Your message</label>
-        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, can you help me with..." required rows="3"></textarea>
+        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, can you help me with..." required rows="5"></textarea>
 
         <button type="submit">Send!</button>
 
     </form>
 
-    <p id="responseMessage" style="display:none; color: green;">Bedankt! Je bericht is verzonden.</p>
+    <p id="responseMessage" class="bevestiging">Thank you for your message<br>I'll get back to you as soon as possible.</p>
 
-    <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        this.style.display = "none";
-        document.getElementById("responseMessage").style.display = "block";
-        this.submit();
-    });
-    </script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();  
+
+    let formData = new FormData(this);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse", {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+    }).then(() => {
+        this.style.display = "none";  
+        document.getElementById("responseMessage").style.display = "flex";  
+    }).catch(error => console.error("It looks like something went wrong. Please refresh the page and try again.", error));
+});
+</script>
 
 </main>
 <footer>
-
+    <div>
+        <p class="label">All rights reserved</p>
+        <p>© 2018-2024 Bence Barens</p>
+    </div>
+    <div>
+        <p class="label">Email</p>
+        <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
+    </div>
 </footer>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let langSwitch = document.getElementById("switch-lang");
-        let currentPath = window.location.pathname;
-
-        if (currentPath.startsWith("/en/")) {
-            langSwitch.href = currentPath.replace("/en/", "/");
-            langSwitch.textContent = "Nederlands";
-        } else {
-            langSwitch.href = "/en" + currentPath;
-            langSwitch.textContent = "English";
-        }
-    });
-</script>
+<script src="/js/language.js"></script>
 </body>
 </html>
