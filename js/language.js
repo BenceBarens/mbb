@@ -32,4 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
+//ALLEEN VOOR GITHUB TESTING
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("a").forEach(link => {
+        if (link.getAttribute("href") && !link.getAttribute("href").startsWith("http")) {
+            link.setAttribute("href", "/mbb/" + link.getAttribute("href"));
+        }
+    });
+});
