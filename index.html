@@ -4,48 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bence Barens</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
-    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/" />
-    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/" />
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/">
 </head>
-<body>
+<body class="home">
     <header>
         <nav>
-        <ul>
-            <li><a href="index.html"><img src="img/logo.svg" alt="" width="50rem"></a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact/index.html">Contact</a></li>
-        </ul>
+            <ul>
+                <li><a href="/index.html"><img src="/img/logo.svg" alt="" width="50"></a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/design/index.html">Portfolio</a></li>
+                <li><a href="/about/index.html">About</a></li>
+                <li><a href="/contact/index.html">Contact</a></li>
+            </ul>
         </nav>
         <div class="language-switcher">
-            <a href="#" id="switch-lang">English</a>
+            <a href="#" id="switch-lang">
+                <img src="/img/gb.svg" alt="Switch Language" id="flag-icon">
+            </a>
         </div>
     </header>
-<main class="home">
+<main>
     <section class="splash">
+        <div><img src="img/pol1.jpg" class="draggable" alt=""><img src="img/pol2.jpg" class="draggable" alt=""></div>
         <h1><span>Hi, ik ben Bence en</span> ik creëer visuele<br>identiteiten voor kleine bedrijven en<br>projecten <span>om ze groots te maken.</span></h1>
+        <script>
+            document.querySelectorAll(".draggable").forEach((draggable) => {
+              let offsetX = 0, offsetY = 0;
+          
+              draggable.addEventListener("pointerdown", (event) => {
+                event.preventDefault();
+                draggable.setPointerCapture(event.pointerId);
+          
+                let startX = event.clientX;
+                let startY = event.clientY;
+          
+                function onPointerMove(event) {
+                  offsetX += event.clientX - startX;
+                  offsetY += event.clientY - startY;
+                  startX = event.clientX;
+                  startY = event.clientY;
+          
+                  draggable.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                }
+          
+                function onPointerUp() {
+                  draggable.releasePointerCapture(event.pointerId);
+                  draggable.removeEventListener("pointermove", onPointerMove);
+                  draggable.removeEventListener("pointerup", onPointerUp);
+                }
+          
+                draggable.addEventListener("pointermove", onPointerMove);
+                draggable.addEventListener("pointerup", onPointerUp);
+              });
+            });
+          </script>
     </section>
     <section class="splash-mobile">
         <h1><span>Hi, ik ben Bence en</span> ik creëer visuele identiteiten voor kleine bedrijven en projecten <span>om ze groots te maken.</span></h1>
     </section>
+
+
+    <section id="home2">
+        <p>Ik ben een 18-jarige multidisciplinaire grafisch vormgever uit Amstelveen. Als jonge ontwerper lever ik frisse en dynamische ontwerpen te leveren, met oog voor de toekomst. Ik studeer aan de HvA en sta altijd open voor nieuwe uitdagingen. <a href="/about/index.html">Lees hier meer over mij</a>.</p>
+    </section>
+    <section id="home3">
+    <div>
+        <h2>Mijn recente werk</h2>
+
+
+        <ul class="portfolio">
+                
+            <li><a href="">
+                <article>
+                    <img src="/img/365.jpg" alt="">
+                    <div>
+                        <p class="label">Graphic design • 2023</p>
+                        <h1>365 days of design</h1>
+                    </div>
+                </article>
+                <img src="/img/arrow.svg" alt="">
+            </a></li>
+    
+            <li><a href="">
+                <article>
+                    <img src="/img/365.jpg" alt="">
+                    <div>
+                        <p class="label">Brand design, web design, web development • 2024-2025</p>
+                        <h1>Art by Ant</h1>
+                    </div>
+                </article>
+                <img src="/img/arrow.svg" alt="">
+            </a></li>
+    
+        </ul>
+    </div>
+
+
+    </section>
 </main>
 <footer>
-
+    <div>
+        <p class="label">Alle rechten voorbehouden</p>
+        <p>© 2018-2024 Bence Barens</p>
+    </div>
+    <div>
+        <p class="label">Email</p>
+        <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
+    </div>
 </footer>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let langSwitch = document.getElementById("switch-lang");
-        let currentPath = window.location.pathname;
-
-        if (currentPath.startsWith("/en/")) {
-            langSwitch.href = currentPath.replace("/en/", "/");
-            langSwitch.textContent = "Nederlands";
-        } else {
-            langSwitch.href = "/en" + currentPath;
-            langSwitch.textContent = "English";
-        }
-    });
-</script>
+<script src="/js/language.js"></script>
 </body>
 </html>
