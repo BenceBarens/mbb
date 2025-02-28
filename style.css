@@ -4,7 +4,6 @@
 body {
     background-color: #20343E;
     width: 100%;
-    height: 100%;
     font-family: "Poppins", serif;
     font-weight: 500;
     font-style: normal;
@@ -17,21 +16,37 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    text-align: center;
     font-size: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 3rem;
+    }
 }
 
 a{
     color: #F7F4ED;
     text-decoration-color: #6C837B;
     text-decoration-thickness: 0.2rem;
-    transition: all 200ms ease;
+    transition: 200ms;
 }
 
 a:hover{
     color: #F7F4ED;
     text-decoration-color: #F7F4ED;
     text-decoration-thickness: 0.2rem;
+}
+
+a:visited, a:active{
+    color: #F7F4ED;
+}
+
+.language-switcher img {
+    width: 2rem;
+    height: auto;
+    border-radius: 50%;
+    border: .2rem solid #F7F4ED;
 }
 
 @keyframes paginaOvergang{
@@ -48,7 +63,7 @@ a:hover{
 
 main{
     animation: paginaOvergang 0.6s;
-    padding: 0 2rem 2rem 2rem;
+    min-height: 100vh;
 }
 
 ::selection {
@@ -78,13 +93,60 @@ header{
     justify-content: space-between;
 }
 
+header nav img{
+    position:initial;
+}
+
 @media only screen and (max-width: 768px) {
     header nav li:first-child {
         display: none;
     }
 }
 
+/*FOOTER--------------------------------*/
+
+footer{
+    background-color: #6C837B;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+footer div{
+    padding-right: 2rem;
+}
+
 /*HOME--------------------------------*/
+
+.home main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home header{
+    position:absolute;
+    width: 100%;
+}
+
+.home .splash {
+    display: flex;
+    align-items: center;
+    background: none;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.draggable{
+    user-select: none;
+    cursor: grab;
+    filter: drop-shadow(12px 10px 18px rgba(0, 0, 0, 0.3));
+}
+
+.draggable:nth-child(1) { transform: rotate(-2deg); }
+.draggable:nth-child(2) { transform: rotate(3deg); }
 
 .home .splash h1 {
     font-size: calc(5vw + 1rem);
@@ -95,33 +157,36 @@ header{
     overflow: hidden;
     height: auto;
     max-width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
-.home .splash {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-}
-  
-.home .splash h1 span, .home .splash-mobile h1 span {
+.home .splash span, .home .splash-mobile span {
     color: #6C837B;
     display: inline;
 }
 
+.home .splash img{
+    width: 12rem;
+    border: 0.8rem solid #F7F4ED;
+    border-bottom: 3.5rem solid #F7F4ED;
+}
+
+.home .splash div{
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+}
+
 .home .splash-mobile{
     display: none;
-    font-size: 2.4rem;
-    padding: 2rem;
-    text-align: center;
+    background: none;
+    min-height: 100vh;
+    align-self: center;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.home .splash-mobile h1{
+    font-size: 3.5rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -130,30 +195,175 @@ header{
     }
 
     .home .splash-mobile{
-        display: inline;
+        display: flex;
     }
 }
 
-/*CONTACT--------------------------------*/
-
-.contact{
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
+#home2 p{
+    font-size: 1.5rem;
+    color:#20343E;
+    max-width: 50rem;
 }
 
-.contact div{
-    width: 30rem;
-    text-align: left;
+#home2{
+    background-color: #F7F4ED;
+    padding: 2rem;
+    padding-bottom: 0;
 }
 
-.contact ul{
+#home2 a{
+    color:#20343E;
+}
+
+#home2 a:hover{
+    text-decoration-color: #20343E;
+}
+
+#home2 img{
+    filter: brightness(0) saturate(100%) invert(13%) sepia(54%) saturate(428%) hue-rotate(155deg) brightness(101%) contrast(88%);
+    height: 1ex;
+    border-width: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #home2 p{
+        font-size: 1rem;
+    }
+}
+
+#home3{
+    background-color: #F7F4ED;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+#home3 h2{
+    font-size: 3rem;
+    color: #20343E;
+    text-align: right;
+}
+
+#home3>div{
+    max-width: 80rem;
+    margin: auto;
+}
+
+.home footer{
+    margin-top: 0;
+}
+
+/*PORTFOLIO--------------------------------*/
+
+.design main{
+    max-width: 80rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+.portfolio{
     list-style: none;
     padding: 0;
 }
 
-.contact h1{
-    text-align: left;
+.portfolio li{
+    margin-bottom: 1rem;
+    background-color: #6C837B;
+    border-radius: 2rem;
+    height: fit-content;
+    border: #6C837B 0.2rem solid;
+    position: relative;
+}
+
+.portfolio article{
+    display: flex;
+    border-radius: 1.85rem;
+    align-items: center;
+    background-color: #20343E;
+    transition: all 200ms ease;
+    flex-wrap: wrap;
+    width:100%;
+    z-index:1;
+}
+
+.portfolio img{
+    width: 10rem;
+    border-radius: 2rem;
+}
+
+.portfolio h1{
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.portfolio p{
+    margin-top: 0;
+}
+
+.portfolio a{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio div{
+    margin-left: 2rem;
+}
+
+.portfolio li:hover article {
+    width: 90%;
+    transition: all 200ms ease;
+    right: 0;
+}
+
+.portfolio li a>img{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10rem;
+}
+
+/* ABOUT------------------------------------ */
+
+.about main img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.about main{
+    max-width: 80rem;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+#about1 div{
+    display: inline-block;
+}
+
+/*CONTACT--------------------------------*/
+
+.contact main{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-top: 2rem;
+}
+
+.contact main div{
+    width: 30rem;
+}
+
+.contact main ul{
+    list-style: none;
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact main{
+        padding: 0 1.5rem;
+    }
 }
 
 form{
@@ -203,4 +413,22 @@ button{
     background:none;
     border: none;
     align-self: flex-end;
+}
+
+.label{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom:-0.5rem;
+    opacity: 80%;
+}
+
+.bevestiging{
+    color: #F7F4ED;
+    display: none;
+    width: 35rem;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: paginaOvergang 0.6s;
 }
