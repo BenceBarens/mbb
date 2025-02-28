@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (currentPath.startsWith("/en/")) {
         langSwitch.href = currentPath.replace("/en/", "/");
-        flagIcon.src = "/img/nl.svg";
+        flagIcon.src = "img/nl.svg";
         flagIcon.alt = "Switch to Dutch";
     } else {
         langSwitch.href = "/en" + currentPath;
-        flagIcon.src = "/img/gb.svg";
+        flagIcon.src = "img/gb.svg";
         flagIcon.alt = "Switch to English";
     }
 
@@ -32,3 +32,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
