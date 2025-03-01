@@ -14,13 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    let pathDepth = currentPath.split('/').length - 2;
+    let relativePath = '../'.repeat(pathDepth);
+
     if (currentPath.startsWith("/en/")) {
         langSwitch.href = currentPath.replace("/en/", "/");
-        flagIcon.src = "img/nl.svg";
+        flagIcon.src = relativePath + "img/nl.svg";
         flagIcon.alt = "Switch to Dutch";
     } else {
         langSwitch.href = "/en" + currentPath;
-        flagIcon.src = "img/gb.svg";
+        flagIcon.src = relativePath + "img/gb.svg";
         flagIcon.alt = "Switch to English";
     }
 
@@ -32,11 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-//ALLEEN VOOR GITHUB TESTING
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll("a").forEach(link => {
-        if (link.getAttribute("href") && !link.getAttribute("href").startsWith("http")) {
-            link.setAttribute("href", "/mbb/" + link.getAttribute("href"));
-        }
-    });
-});
+
