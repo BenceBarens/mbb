@@ -5,20 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let userLang = navigator.language || navigator.userLanguage;
     let savedLang = localStorage.getItem("preferredLang");
 
-    // Determine the base URL for GitHub Pages
-    let baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
-
     if (!savedLang) {
         if (userLang.startsWith("en") && !currentPath.startsWith("/en/")) {
             localStorage.setItem("preferredLang", "en");
-            window.location.href = baseUrl + "/en" + currentPath;
+            window.location.href = "/en" + currentPath;
         } else {
             localStorage.setItem("preferredLang", "nl");
         }
     }
 
-    let pathDepth = currentPath.split('/').length - 2;
-    let relativePath = '../'.repeat(pathDepth);
+    let pathParts = currentPath.split('/');
+    let relativePath = pathParts.slice(0, -1).map(() => '..').join('/') + '/';
 
     if (currentPath.startsWith("/en/")) {
         langSwitch.href = currentPath.replace("/en/", "/");
