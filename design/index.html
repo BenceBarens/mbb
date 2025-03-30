@@ -10,25 +10,44 @@
     <link rel="alternate" hreflang="en" href="../en/index.html">
 </head>
 <body class="design">
-    <header>
-        <nav>
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
             <ul>
                 <li><a href="../index.html"><img src="../img/logo.svg" alt="" width="50"></a></li>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="../design/index.html" class="currentPage">Portfolio</a></li>
                 <li><a href="../about/index.html">About</a></li>
                 <li><a href="../contact/index.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="language-switcher">
-            <a href="#" id="switch-lang">
-                <img src="../img/gb.svg" alt="Switch Language" id="flag-icon">
-            </a>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
         </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html" class="currentPage">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+
+                <div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div>
+              </ul>
+            </div>
+          </nav>
     </header>
 <main>
 
-    <h1>Kleine bedrijven en projecten groots maken</h1>
+    <h1>Kleine ideeën groots maken.</h1>
 
     <ul class="portfolio">
     
@@ -45,17 +64,31 @@
 
         <li><a href="">
             <article>
-                <img src="../img/365.jpg" alt="">
+                <img src="../img/artbyant.jpg" alt="">
                 <div>
-                    <p class="label">Brand design, web design, web development • 2024-2025</p>
+                    <p class="label">Brand design, web design, web development • 2024 - heden</p>
                     <h1>Art by Ant</h1>
                 </div>
             </article>
             <img src="../img/arrow.svg" alt="">
         </a></li>
 
-    </ul>
+        <li><a href="">
+            <article>
+                <img src="../img/ricetta1.jpg" alt="">
+                <div>
+                    <p class="label">UX design, studentenwerk • 2025</p>
+                    <h1>Ricetta</h1>
+                </div>
+            </article>
+            <img src="../img/arrow.svg" alt="">
+        </a></li>
 
+    </ul>
+    <section id="design2">
+    <h2>Binnenkort meer...</h2>
+    <p>Ik heb recent mijn volledige portfoliowebsite herontworpen en vanaf 0 zelf gecodeerd.<br><br>Ik ben dan ook nog volop bezig met het aanvullen van mijn werk. Komt snel terug voor meer!</p>
+    </section>
 </main>
 <footer>
     <div>

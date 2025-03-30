@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let langSwitch = document.getElementById("switch-lang");
-    let flagIcon = document.getElementById("flag-icon");
+    let langSwitchDesktop = document.getElementById("switch-lang-desktop");
+    let langSwitchMobile = document.getElementById("switch-lang-mobile");
     let currentPath = window.location.pathname;
     let userLang = navigator.language || navigator.userLanguage;
     let savedLang = localStorage.getItem("preferredLang");
 
+    // Redirect op basis van browsertaal als er geen voorkeur is opgeslagen
     if (!savedLang) {
         if (userLang.startsWith("en") && !currentPath.startsWith("/en/")) {
             localStorage.setItem("preferredLang", "en");
@@ -14,20 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    let pathParts = currentPath.split('/');
-    let relativePath = pathParts.slice(0, -1).map(() => '..').join('/') + '/';
-
+    // Taalkoppeling voor desktop
     if (currentPath.startsWith("/en/")) {
-        langSwitch.href = currentPath.replace("/en/", "/");
-        flagIcon.src = relativePath + "img/nl.svg";
-        flagIcon.alt = "Switch to Dutch";
+        langSwitchDesktop.href = currentPath.replace("/en/", "/");
+        langSwitchDesktop.textContent = "NL"; // Toon NL voor desktop
+        langSwitchMobile.href = currentPath.replace("/en/", "/");
+        langSwitchMobile.textContent = "NL"; // Toon NL voor mobiel
     } else {
-        langSwitch.href = "/en" + currentPath;
-        flagIcon.src = relativePath + "img/gb.svg";
-        flagIcon.alt = "Switch to English";
+        langSwitchDesktop.href = "/en" + currentPath;
+        langSwitchDesktop.textContent = "EN"; // Toon EN voor desktop
+        langSwitchMobile.href = "/en" + currentPath;
+        langSwitchMobile.textContent = "EN"; // Toon EN voor mobiel
     }
 
-    langSwitch.addEventListener("click", function () {
+    // Sla de voorkeur op bij klikken
+    langSwitchDesktop.addEventListener("click", function () {
+        if (currentPath.startsWith("/en/")) {
+            localStorage.setItem("preferredLang", "nl");
+        } else {
+            localStorage.setItem("preferredLang", "en");
+        }
+    });
+
+    langSwitchMobile.addEventListener("click", function () {
         if (currentPath.startsWith("/en/")) {
             localStorage.setItem("preferredLang", "nl");
         } else {
@@ -35,4 +45,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-

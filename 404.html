@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 • Bence Barens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/">
+</head>
+<body class="error404">
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="../index.html"><img src="../img/logo.svg" alt="" width="50"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+
+                <div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <div>
+            <h1>404</h1>
+            <p>Deze pagina bestaat (nog) niet. Sorry voor de teleurstelling. Ik hoop dat ik het kan goedmaken met een potje tetris. Gebruik de pijltjes op de toetsenbord om te spelen.</p>
+            <p>Geen tijd voor spelletjes? <a href="index.html">Klik hier</a> om naar de homepagina te gaan.</p>
+        </div>
+        <canvas id="tetris"></canvas>
+    </main>
+
+    <footer>
+        <div>
+            <p class="label">Alle rechten voorbehouden</p>
+            <p>© 2018-2024 Bence Barens</p>
+        </div>
+        <div>
+            <p class="label">Email</p>
+            <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
+        </div>
+    </footer>
+
+    <script src="js/language.js"></script>
+    <script src="js/tetris.js"></script>
+</body>
+</html>

@@ -10,57 +10,47 @@
     <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/">
 </head>
 <body class="home">
-    <header>
-        <nav>
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
             <ul>
                 <li><a href="index.html"><img src="img/logo.svg" alt="" width="50"></a></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="currentPage">Home</a></li>
                 <li><a href="design/index.html">Portfolio</a></li>
                 <li><a href="about/index.html">About</a></li>
                 <li><a href="contact/index.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="language-switcher">
-            <a href="#" id="switch-lang">
-                <img src="img/gb.svg" alt="Switch Language" id="flag-icon">
-            </a>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
         </div>
+        
     </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="index.html" class="currentPage">Home</a></li>
+                <li><a href="design/index.html">Portfolio</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+
+                <div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
 <main>
     <section class="splash">
         <div><img src="img/pol1.jpg" class="draggable" alt=""><img src="img/pol2.jpg" class="draggable" alt=""></div>
         <h1><span>Hi, ik ben Bence en</span> ik creëer visuele<br>identiteiten voor kleine bedrijven en<br>projecten <span>om ze groots te maken.</span></h1>
-        <script>
-            document.querySelectorAll(".draggable").forEach((draggable) => {
-              let offsetX = 0, offsetY = 0;
-          
-              draggable.addEventListener("pointerdown", (event) => {
-                event.preventDefault();
-                draggable.setPointerCapture(event.pointerId);
-          
-                let startX = event.clientX;
-                let startY = event.clientY;
-          
-                function onPointerMove(event) {
-                  offsetX += event.clientX - startX;
-                  offsetY += event.clientY - startY;
-                  startX = event.clientX;
-                  startY = event.clientY;
-          
-                  draggable.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-                }
-          
-                function onPointerUp() {
-                  draggable.releasePointerCapture(event.pointerId);
-                  draggable.removeEventListener("pointermove", onPointerMove);
-                  draggable.removeEventListener("pointerup", onPointerUp);
-                }
-          
-                draggable.addEventListener("pointermove", onPointerMove);
-                draggable.addEventListener("pointerup", onPointerUp);
-              });
-            });
-          </script>
+        <script src="js/polaroid.js"></script>
     </section>
     <section class="splash-mobile">
         <h1><span>Hi, ik ben Bence en</span> ik creëer visuele identiteiten voor kleine bedrijven en projecten <span>om ze groots te maken.</span></h1>
@@ -68,7 +58,7 @@
 
 
     <section id="home2">
-        <p>Ik ben een 18-jarige multidisciplinaire grafisch vormgever uit Amstelveen. Als jonge ontwerper lever ik frisse en dynamische ontwerpen te leveren, met oog voor de toekomst. Ik studeer aan de HvA en sta altijd open voor nieuwe uitdagingen. <a href="/about/index.html">Lees hier meer over mij</a>.</p>
+        <p class="highlightP">Ik ben een 18-jarige multidisciplinaire grafisch vormgever uit Amstelveen. Als jonge ontwerper lever ik frisse en dynamische ontwerpen te leveren, met oog voor de toekomst. Ik studeer aan de HvA en sta altijd open voor nieuwe uitdagingen. <a href="about/index.html">Lees hier meer over mij</a>.</p>
     </section>
     <section id="home3">
     <div>
@@ -90,9 +80,9 @@
     
             <li><a href="">
                 <article>
-                    <img src="img/365.jpg" alt="">
+                    <img src="img/artbyant.jpg" alt="">
                     <div>
-                        <p class="label">Brand design, web design, web development • 2024-2025</p>
+                        <p class="label">Brand design, web design, web development • 2024 - heden</p>
                         <h1>Art by Ant</h1>
                     </div>
                 </article>
@@ -100,8 +90,10 @@
             </a></li>
     
         </ul>
-    </div>
 
+
+    </div>
+    <p><a href="design/index.html" class="button1">Bekijk meer werk</a></p>
 
     </section>
 </main>

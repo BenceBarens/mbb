@@ -10,22 +10,41 @@
     <link rel="alternate" hreflang="en" href="../en/index.html">
 </head>
 <body class="contact">
-<header>
-    <nav>
-        <ul>
-            <li><a href="../index.html"><img src="../img/logo.svg" alt="" width="50"></a></li>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../design/index.html">Portfolio</a></li>
-            <li><a href="../about/index.html">About</a></li>
-            <li><a href="index.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="language-switcher">
-        <a href="#" id="switch-lang">
-            <img src="../img/gb.svg" alt="Switch Language" id="flag-icon">
-        </a>
-    </div>
-</header>
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="../index.html"><img src="../img/logo.svg" alt="" width="50"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html" class="currentPage">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html" class="currentPage">Contact</a></li>
+
+                <div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div>
+              </ul>
+            </div>
+          </nav>
+    </header>
 <main>
     <div>
         <h1>Laten we samen iets moois maken.</h1>
