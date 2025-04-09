@@ -197,6 +197,7 @@ header nav a{
     user-select: none;
     background-color: rgba(32, 52, 62, 0.3);
     box-shadow: 0 0 1rem 1rem rgba(32, 52, 62, 0.3);
+    border-radius: 50%;
   }
   
   #menuToggle input {
@@ -430,6 +431,7 @@ footer div{
 #home3{
     padding: 2rem;
     padding-top: 0;
+    max-width: 80rem;
 }
 
 #home3 h2{
@@ -476,6 +478,7 @@ footer div{
         text-align: left;
     }
 }
+
 
 /*PORTFOLIO--------------------------------*/
 
@@ -717,6 +720,10 @@ footer div{
 
     #about1 p{
         font-size: 1.1rem;
+    }
+
+    #aboutp1, #aboutp2, #aboutp3{
+        text-decoration: none;
     }
 
     #about2 p{
