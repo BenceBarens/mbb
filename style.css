@@ -90,19 +90,6 @@ main{
     color: #F7F4ED;
 }
 
-.button1{
-    background-color: #20343E;
-    text-decoration: none;
-    padding:1rem 2rem;
-    border-radius: 2rem;
-    transition: all 200ms ease;
-}
-
-.button1:hover{
-    border-radius: .5rem;
-}
-
-
 /* HEADER --------------------------------------- */
 
 .mobile-header {
@@ -327,12 +314,6 @@ footer div{
 
 /*HOME--------------------------------*/
 
-.home main{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .home header{
     position:absolute;
     width: 100%;
@@ -417,9 +398,11 @@ footer div{
 }
 
 #home2{
-    padding: 0 2rem 3rem 2rem;
-    justify-content: center;
-    display: flex;
+    max-width: 80rem;
+    padding: 2rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #home2 img{
@@ -432,6 +415,9 @@ footer div{
     padding: 2rem;
     padding-top: 0;
     max-width: 80rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #home3 h2{
@@ -471,6 +457,10 @@ footer div{
     #home2 p{
         font-size: 1rem;
         padding: 0;
+    }
+
+    #home2{
+        padding-top: 0;
     }
 
     #home3 h2{
