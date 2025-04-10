@@ -68,21 +68,25 @@ a:visited, a:active{
     border: .2rem solid #F7F4ED;
 }
 
-@keyframes paginaOvergang{
-    from{
+@keyframes paginaOvergang {
+    from {
         opacity: 0;
-        transform:translateY(10vh);
+        transform: translateY(5rem); /* gebruik hier liever rem dan vh */
     }
 
-    to{
+    to {
         opacity: 1;
-        transform:translateY(0);
+        transform: translateY(0);
     }
 }
 
-main{
-    animation: paginaOvergang 0.6s;
+
+main {
+    animation: paginaOvergang 0.6s ease;
     min-height: 100vh;
+    position: relative;
+    overflow-anchor: none;
+    will-change: transform, opacity;
 }
 
 ::selection {
