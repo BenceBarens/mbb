@@ -71,7 +71,7 @@ a:visited, a:active{
 @keyframes paginaOvergang {
     from {
         opacity: 0;
-        transform: translateY(5rem); /* gebruik hier liever rem dan vh */
+        transform: translateY(5rem);
     }
 
     to {
@@ -84,9 +84,6 @@ a:visited, a:active{
 main {
     animation: paginaOvergang 0.6s ease;
     min-height: 100vh;
-    position: relative;
-    overflow-anchor: none;
-    will-change: transform, opacity;
 }
 
 ::selection {
@@ -130,6 +127,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 header nav img{
@@ -182,7 +180,7 @@ header nav a{
     display: block;
     position: fixed;
     top: 1.25rem;
-    right: 1.25rem; /* Change from left to right */
+    right: 1.25rem;
     z-index: 2;
     -webkit-user-select: none;
     user-select: none;
@@ -208,8 +206,8 @@ header nav a{
   
   #menuToggle span {
     display: block;
-    width: 2.0625rem;
-    height: 0.25rem;
+    width: 2rem;
+    height: 0.2rem;
     margin-bottom: 0.3125rem;
     position: relative;
     background: rgba(247, 244, 237, 0.8);
@@ -831,6 +829,17 @@ button:hover{
 
     .contact h1{
         max-width: 80%;
+    }
+
+    .bevestiging{
+        color: #F7F4ED;
+        display: none;
+        width: 35rem;
+        font-size: 1.2rem;
+        align-items: top;
+        justify-content: left;
+        text-align: left;
+        animation: paginaOvergang 0.6s;
     }
 }
 
