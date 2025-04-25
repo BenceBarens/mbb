@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 days of design • Bence Barens</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/voices">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/voices">
+</head>
+<body class="daysofdesign">
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="../../index.html"><img src="../../img/logo.svg" alt="Logo van Bence Barens." width="50"></a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../design/index.html" class="currentPage">Portfolio</a></li>
+                <li><a href="../../about/index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../design/index.html" class="currentPage">Portfolio</a></li>
+                <li><a href="../../about/index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+
+                <li><div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+
+    <section id="detail1">
+        <a href="../index.html" role="navigation"><img src="../../img/arrow.svg" alt="Vorige pagina"></a>
+        <div><h1>365 days of design</h1>
+        <p class="label">Graphic design • 2023</p></div>
+    </section>
+    <section>
+        <p>De #365daysofdesign challenge was een persoonlijk project met een simpele uitdaging: elke dag van het jaar 2023 een poster of ander ontwerp maken en publiceren. Het project liep van 1 januari tot 31 december en staat, van nieuw naar oud, zowel hieronder als op mijn <a href="https://www.instagram.com/madebybence" target="_blank">Instagram-pagina</a> gepubliceerd. Het doel van het project was mijn ontwerpvaardigheden en discipline op een leuke (en vaak humoristische) manier te ontwikkelen.</p>
+    </section>
+    <section>
+
+        <style>
+        .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.03);
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      transform: translateY(-50%);
+    }
+    .controls button {
+      background: rgba(255,255,255,0.8);
+      border: none;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: background 0.3s;
+    }
+    .controls button:hover {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid" id="image-grid"></div>
+
+  <div id="lightbox">
+    <div class="controls">
+      <button onclick="prevImage()">←</button>
+      <button onclick="nextImage()">→</button>
+    </div>
+    <img id="lightbox-img" />
+  </div>
+
+  <script>
+    const grid = document.getElementById('image-grid');
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let currentIndex = 0;
+    const imageList = [];
+
+    // Voeg de afbeeldingen toe in omgekeerde volgorde (365 t/m 001)
+    for (let i = 365; i >= 1; i--) {
+      const number = i.toString().padStart(3, '0');
+      const src = `images/${number}.jpg`;
+      imageList.push(src);
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.loading = 'lazy';
+      img.alt = `Afbeelding ${number}`;
+      img.onclick = () => openLightbox(imageList.length - 1 - (365 - i));
+      grid.appendChild(img);
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
+      lightboxImg.src = imageList[currentIndex];
+      lightbox.style.display = "flex";
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % imageList.length;
+      lightboxImg.src = imageList[currentIndex];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+      lightboxImg.src = imageList[currentIndex];
+    }
+
+    // Sluit de lightbox bij klik buiten de afbeelding
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    // Pijltjestoetsen
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') lightbox.style.display = 'none';
+      }
+    });
+  </script>
+    </section>
+        
+
+
+    </main>
+
+    <footer>
+        <div>
+            <p class="label">Alle rechten voorbehouden</p>
+            <p>© 2018-2025 Bence Barens</p>
+        </div>
+        <div>
+            <p class="label">Email</p>
+            <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
+        </div>
+    </footer>
+
+    <script src="../../js/language.js"></script>
+</body>
+</html>
