@@ -605,7 +605,7 @@ footer div{
     }
 }
 
-/* PORTFOLIO INDIVIDUEEL ----------------------------------------------------------------- */
+/* PORTFOLIO DETAIL ----------------------------------------------------------------- */
 
 .artbyant, .voices, .daysofdesign{
     
@@ -620,7 +620,13 @@ footer div{
         margin-right: 1rem;
         margin-top: 1rem;
         transform: scaleX(-1);
+        transition: all 200ms ease;
     }
+
+    #detail1 a img:hover{
+        transform: translate(-1rem, 0) scaleX(-1) scale(1.2);
+    }
+
 
     h1{
         font-size: 3rem;
@@ -634,6 +640,12 @@ footer div{
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
+    #detail1 div{
+        min-width: fit-content;
+        white-space: nowrap;
+        margin-right: 3rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -641,7 +653,14 @@ footer div{
         flex-direction: column;
         gap: 1rem;
     }
+
+    #detail1 div{
+        min-width: none;
+        white-space: normal;
+    }
 }
+
+
 
 /* ABOUT------------------------------------------------------------------------------------- */
 
