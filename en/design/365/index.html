@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 days of design • Bence Barens</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/365">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/365">
+</head>
+<body class="daysofdesign">
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="../../index.html"><img src="../../img/logo.svg" alt="Logo of Bence Barens." width="50"></a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../design/index.html" class="currentPage">Portfolio</a></li>
+                <li><a href="../../about/index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../design/index.html" class="currentPage">Portfolio</a></li>
+                <li><a href="../../about/index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+
+                <li><div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+
+    <section id="detail1">
+        <button role="navigation" onclick="history.back()"><img src="../../img/arrow.svg" alt="Vorige pagina"></button>
+        <div><h1>365 days of design</h1>
+        <p class="label">Graphic design • 2023</p></div>
+        <p>De #365daysofdesign challenge was een persoonlijk project met een simpele uitdaging: elke dag van het jaar 2023 een poster of ander ontwerp maken en publiceren. Het project liep van 1 januari tot 31 december en staat, van nieuw naar oud, zowel hieronder als op mijn <a href="https://www.instagram.com/madebybence" target="_blank">Instagram-pagina</a> gepubliceerd. Het doel van het project was mijn ontwerpvaardigheden en discipline op een leuke (en vaak humoristische) manier te ontwikkelen.</p>
+    </section>
+    <section>
+        
+    </section>
+    <section>
+
+        <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+      gap: 0.5rem;
+    }
+
+    .grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: .5rem;
+      cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="white" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
+      transition: all 0.2s ease;
+    }
+
+    .grid img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+
+    #lightbox > img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      transform: translateY(-50%);
+    }
+
+    #controls-button-one{
+      transform: scaleX(-1);
+    }
+
+    .controls button{
+      border: none;
+      padding: 3rem;
+      transition: all 0.2s ease;
+      cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="white" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
+    }
+
+    .controls button img{
+      width: 4rem;
+    }
+
+    .controls button:hover {
+      transform: scale(1.2) translate(1rem, 0);
+    }
+
+    #controls-button-one:hover{
+      transform: scaleX(-1) scale(1.2) translate(1rem, 0);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .controls{
+        top: 95%;
+      }
+
+      #lightbox{
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+
+  </style>
+
+
+  <div class="grid" id="image-grid"></div>
+
+  <div id="lightbox">
+    <div class="controls">
+      <button onclick="prevImage()" id="controls-button-one"><img src="../../img/arrow.svg" alt="Vorige afbeelding"></button>
+      <button onclick="nextImage()"><img src="../../img/arrow.svg" alt="Volgende afbeelding"></button>
+    </div>
+    <img id="lightbox-img" />
+  </div>
+    </section>
+        
+
+
+    </main>
+
+    <footer>
+        <div>
+            <p class="label">Alle rechten voorbehouden</p>
+            <p>© 2018-2025 Bence Barens</p>
+        </div>
+        <div>
+            <p class="label">Email</p>
+            <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
+        </div>
+    </footer>
+
+    <script src="../../js/language.js"></script>
+    <script src="../../js/365.js"></script>
+</body>
+</html>

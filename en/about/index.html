@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About • Bence Barens</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/about">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/about">
+</head>
+<body class="about">
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="../index.html"><img src="../img/logo.svg" alt="Logo of Bence Barens." width="50"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html" class="currentPage">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html" class="currentPage">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+
+                <li><div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+<main>
+
+<section id="about1">
+    <img src="../img/bence.jpg" alt="Een portret van Bence die met zijn armen over elkaar lachend naar rechts kijkt. Op de achtergrond is een wazige stedelijke omgeving te zien met gebouwen en groen. De foto is genomen bij schemering.">
+    <div><h1>Ben <img src="../img/ster.svg" alt=""> ce</h1>
+    <p class="highlightP">[Bence Barens]</p>
+    <p class="highlightP">1. <span id="aboutp1">Designer</span>, <span id="aboutp2">barista</span> & <span id="aboutp3">student</span>.</p></div>
+    <div class="custom-cursor"></div>
+</section>
+<section id="about2">
+    <p class="highlightP">I'm an 18-year-old multidisciplinary graphic designer based in Amsterdam. As a young designer I deliver youthful and dynamic designs, prepairing you for the future. I am always looking for new challenges.</p>
+</section>
+<section id="about3">
+    <p>I am currently in my first year of studying <a href="https://www.hva.nl/opleidingen/communication-and-multimedia-design" target="_blank">Communication and Multimedia Design</a> at the Amsterdam University of Applied Sciences. The remainer of my time, I spend by helping as many people as possible with shaping their ideas. For this I use knowledge from my education, but also mainly from my many years of freelance experience. Furthermore, I am also a part-time barista and mainly a full-time coffee lover.</p>
+    <p>I am selective in the projects I accept. I make sure that I fully support the project and that we are on the same page. This way, I can make sure that I do justice to the assignment. I am also proud that I do not use AI anywhere in my design process, since that is the only way I can guarantee unique designs that truly match the vision of my clients.</p>
+</section>
+<section id="about4">
+    <p class="highlightP">Curious about what I can do for you? <br>
+    Take a look at <a href="../design/index.html">my recent work</a> or <a href="../contact/index.html">get in touch</a>.</p>
+</section>
+
+</main>
+<footer>
+    <div>
+        <p class="label">All rights reserved</p>
+        <p>© 2018-2025 Bence Barens</p>
+    </div>
+    <div>
+        <p class="label">Email</p>
+        <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
+    </div>
+</footer>
+<script src="../js/language.js"></script>
+<script>
+    const cursor = document.querySelector('.custom-cursor');
+
+    // Laat de cursor de muis volgen
+    document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`; // `clientX` = X-positie binnen het scherm
+    cursor.style.top = `${e.clientY}px`;  // `clientY` = Y-positie binnen het scherm
+});
+
+
+    function setCursor(image) {
+        cursor.style.backgroundImage = `url('${image}')`;
+        cursor.style.opacity = '1'; // Fade-in effect
+    }
+
+    function hideCursor() {
+        cursor.style.opacity = '0'; // Fade-out effect
+    }
+
+    // Event Listeners voor de hover elementen
+    document.getElementById('aboutp1').addEventListener('mouseenter', () => setCursor('../img/ff.png'));
+    document.getElementById('aboutp2').addEventListener('mouseenter', () => setCursor('../img/koffie.jpg'));
+    document.getElementById('aboutp3').addEventListener('mouseenter', () => setCursor('../img/hva.jpg'));
+
+    // Cursor verbergen als de muis weggaat
+    document.querySelectorAll('#aboutp1, #aboutp2, #aboutp3').forEach(el => {
+        el.addEventListener('mouseleave', hideCursor);
+    });
+</script>
+</body>
+</html>

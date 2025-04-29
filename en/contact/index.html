@@ -4,31 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact • Bence Barens</title>
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="icon" type="image/x-icon" href="../../img/favicon.svg">
-    <link rel="alternate" hreflang="nl" href="../../nl/index.html">
-    <link rel="alternate" hreflang="en" href="../en/index.html">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/contact">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/contact">
 </head>
 <body class="contact">
-<header>
-    <nav>
-        <ul>
-            <li><a href="../index.html"><img src="../../img/logo.svg" alt="" width="50"></a></li>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../design/index.html">Portfolio</a></li>
-            <li><a href="../about/index.html">About</a></li>
-            <li><a href="index.html" class="currentPage">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="language-switcher">
-        <a href="#" id="switch-lang">
-            <img src="../../img/nl.svg" alt="Schakel naar Nederlands" id="flag-icon">
-        </a>
-    </div>
-</header>
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="../index.html"><img src="../img/logo.svg" alt="Logo of Bence Barens." width="50"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html" class="currentPage">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../design/index.html">Portfolio</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html" class="currentPage">Contact</a></li>
+
+                <li><div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
 <main>
     <div>
         <h1>Let's make something beautiful together.</h1>
+        <!-- <p class="highlightP">Fun Fact: je bent slechts één mailtje verwijderd van een prachtige visuele identiteit.</p> -->
         <section>
             <p class="label">Email</p>
             <ul>
@@ -53,26 +73,26 @@
     </div>
     <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse">
 
-        <label for="entry.119957155">01. What is your name?</label>
-        <input type="text" name="entry.119957155" placeholder="Michael Scott" required>
+        <label for="entry.119957155">01. What's your name?</label>
+        <input type="text" name="entry.119957155" id="entry.119957155" placeholder="Michael Scott" required>
 
-        <label for="entry.893515591">02. What is your e-mail adress?</label>
-        <input type="email" name="entry.893515591" placeholder="m.scott@dundermifflin.nl" required>
+        <label for="entry.893515591">02. What's your e-mail adress?</label>
+        <input type="email" name="entry.893515591" id="entry.893515591" placeholder="m.scott@dundermifflin.nl" required>
 
-        <label for="entry.364263748">03. For what company or project do you need my services?</label>
-        <input type="text" name="entry.364263748" placeholder="Dunder Mifflin Paper Company, Inc." required>
+        <label for="entry.364263748">03. For which company or project are you seeking help?</label>
+        <input type="text" name="entry.364263748" id="entry.364263748" placeholder="Dunder Mifflin Paper Company, Inc." required>
 
-        <label for="entry.74498222">04. What services are you looking for?</label>
-        <input type="text" name="entry.74498222" placeholder="Web design, graphic design, etc." required>
+        <label for="entry.74498222">04. What kind of service are you looking for?</label>
+        <input type="text" name="entry.74498222" id="entry.74498222" placeholder="Web design, graphic design, etc." required>
 
         <label for="entry.410020173">05. Your message</label>
-        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, can you help me with..." required rows="5"></textarea>
+        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, I need your help with..." required rows="5"></textarea>
 
         <button type="submit">Send!</button>
 
     </form>
 
-    <p id="responseMessage" class="bevestiging">Thank you for your message<br>I'll get back to you as soon as possible.</p>
+    <p id="responseMessage" class="bevestiging">Thank you for your message!<br>I'll get back to you as soon as possible.</p>
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(event) {
@@ -87,7 +107,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     }).then(() => {
         this.style.display = "none";  
         document.getElementById("responseMessage").style.display = "flex";  
-    }).catch(error => console.error("It looks like something went wrong. Please refresh the page and try again.", error));
+    }).catch(error => console.error("Er lijkt iets fout te zijn gegaan. Ververs de pagina en probeer het opnieuw.", error));
 });
 </script>
 
@@ -95,13 +115,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 <footer>
     <div>
         <p class="label">All rights reserved</p>
-        <p>© 2018-2024 Bence Barens</p>
+        <p>© 2018-2025 Bence Barens</p>
     </div>
     <div>
         <p class="label">Email</p>
         <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
     </div>
 </footer>
-<script src="../../js/language.js"></script>
+<script src="../js/language.js"></script>
 </body>
 </html>

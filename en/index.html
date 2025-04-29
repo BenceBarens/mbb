@@ -4,79 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bence Barens</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
-    <link rel="alternate" hreflang="nl" href="../nl/index.html">
-    <link rel="alternate" hreflang="en" href="../en/index.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="alternate" hreflang="nl" href="https://bencebarens.nl/">
+    <link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/">
 </head>
 <body class="home">
-<header>
-    <nav>
-    <ul>
-        <li><a href="index.html"><img src="../img/logo.svg" alt="" width="50"></a></li>
-        <li><a href="index.html" class="currentPage">Home</a></li>
-        <li><a href="design/index.html">Portfolio</a></li>
-        <li><a href="about/index.html">About</a></li>
-        <li><a href="contact/index.html">Contact</a></li>
-    </ul>
-    </nav>
-    <div class="language-switcher">
-        <a href="#" id="switch-lang">NL</a>
-    </div>
-</header>
+    <header class="desktop-header" aria-hidden="true">
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html"><img src="img/logo.svg" alt="Logo van Bence Barens." width="50"></a></li>
+                <li><a href="index.html" class="currentPage">Home</a></li>
+                <li><a href="design/index.html">Portfolio</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher-desktop">
+            <a href="#" id="switch-lang-desktop">NL</a>
+        </div>
+        
+    </header>
+    <header class="mobile-header" aria-hidden="true">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" id="menuCheckbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <li><a href="index.html" class="currentPage">Home</a></li>
+                <li><a href="design/index.html">Portfolio</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+
+                <li><div class="language-switcher-mobile">
+                    <a href="#" id="switch-lang-mobile">NL</a>
+                </div></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
 <main>
     <section class="splash">
-        <div><img src="../img/pol1.jpg" class="draggable" alt=""><img src="../img/pol2.jpg" class="draggable" alt=""></div>
+        <div><img src="img/pol1.jpg" class="draggable" alt="Een close-up portret van Bence die in de camera kijkt en met zijn handen een kader vormt. Hij staat buiten in een natuurlijke omgeving."><img src="img/pol2.jpg" class="draggable" alt="Een halflang portret van Bence die met gekruiste armen naar links kijkt. Hij staat buiten in een natuurlijke omgeving."></div>
         <h1><span>Hi, I'm Bence and</span> I visualise and brand<br>small businesses and projects <span>to help<br>them become great.</span></h1>
-        <script>
-            document.querySelectorAll(".draggable").forEach((draggable) => {
-              let offsetX = 0, offsetY = 0;
-          
-              draggable.addEventListener("pointerdown", (event) => {
-                event.preventDefault();
-                draggable.setPointerCapture(event.pointerId);
-          
-                let startX = event.clientX;
-                let startY = event.clientY;
-          
-                function onPointerMove(event) {
-                  offsetX += event.clientX - startX;
-                  offsetY += event.clientY - startY;
-                  startX = event.clientX;
-                  startY = event.clientY;
-          
-                  draggable.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-                }
-          
-                function onPointerUp() {
-                  draggable.releasePointerCapture(event.pointerId);
-                  draggable.removeEventListener("pointermove", onPointerMove);
-                  draggable.removeEventListener("pointerup", onPointerUp);
-                }
-          
-                draggable.addEventListener("pointermove", onPointerMove);
-                draggable.addEventListener("pointerup", onPointerUp);
-              });
-            });
-          </script>
+        <script src="js/polaroid.js"></script>
     </section>
     <section class="splash-mobile">
-        <h1><span>Hi, ik ben Bence en</span> ik creëer visuele identiteiten voor kleine bedrijven en projecten <span>om ze groots te maken.</span></h1>
+        <div><img src="img/pol1.jpg" class="draggable" alt="Een close-up portret van Bence die in de camera kijkt en met zijn handen een kader vormt. Hij staat buiten in een natuurlijke omgeving."><img src="img/pol2.jpg" class="draggable" alt="Een halflang portret van Bence die met gekruiste armen naar links kijkt. Hij staat buiten in een natuurlijke omgeving."></div>
+        <h1><span>Hi, I'm Bence and</span> I visualise and brand small businesses and projects <span>to help them become great.</span></h1>
     </section>
-    <section>
-        Tekst
+
+
+    <section id="home2">
+        <p class="highlightP">I'm an 18-year-old multidisciplinary graphic designer based in Amsterdam. As a young designer I deliver youthful and dynamic designs, prepairing you for the future. Ik study at the Amsterdam University of Applied Sciences and I'm always looking for new challenges and oppertunities. <a href="about/index.html">You can read more about me here</a>.</p>
+    </section>
+    <section id="home3">
+    <div>
+        <h2>My recent work</h2>
+
+
+        <ul class="portfolio">
+                
+            <li><a href="design/365/index.html">
+                <article>
+                    <img src="img/365.jpg" alt="Een collage van vele kleine afbeeldingen, gerangschikt in een raster, met in het midden de grote, witte cijfers '365' en daaronder de tekst 'days of design' in een kleiner, wit lettertype. De kleine afbeeldingen bevatten verschillende grafische ontwerpen en typografische experimenten.">
+                    <div>
+                        <p class="label">Graphic design • 2023</p>
+                        <h1>365 days of design</h1>
+                    </div>
+                </article>
+                <img src="img/arrow.svg" alt="">
+            </a></li>
+    
+            <li><a href="design/artbyant/index.html">
+                <article>
+                    <img src="img/artbyant.jpg" alt="Een collage van verschillende elementen van de visuele identiteit van kunstenaar Antoni van de Geijn. De collage bevat een logo, een visitekaartje, een website en een aantal kunstwerken van de kunstenaar. De kleuren zijn levendig en de compositie is speels.">
+                    <div>
+                        <p class="label">Brand design, web design, web development • 2024 - now</p>
+                        <h1>Art by Ant</h1>
+                    </div>
+                </article>
+                <img src="img/arrow.svg" alt="">
+            </a></li>
+    
+        </ul>
+
+
+    </div>
+    <p><a href="design/index.html">View more work ></a></p>
+
     </section>
 </main>
 <footer>
     <div>
-        <p class="label">Alle rechten voorbehouden</p>
-        <p>© 2018-2024 Bence Barens</p>
+        <p class="label">All rights reserved</p>
+        <p>© 2018-2025 Bence Barens</p>
     </div>
     <div>
         <p class="label">Email</p>
         <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
     </div>
 </footer>
-<script src="../js/language.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>
