@@ -688,7 +688,7 @@ footer div{
 }
 
 .about main{
-    max-width: 80rem;
+    max-width: 70rem;
     margin: auto;
     padding: 1.5rem;
     padding-top: 2rem;
@@ -761,7 +761,7 @@ footer div{
 @media only screen and (min-width: 768px) {
 #about3{
     border-left: #6C837B 0.2rem solid;
-    padding-left: 2rem;
+    padding-left: 3rem;
 }
 }
 
