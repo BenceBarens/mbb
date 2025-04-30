@@ -5,13 +5,8 @@
 	<loc>https://bencebarens.nl/</loc>
 	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
 	<priority>1.0</priority>
-	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/" />
-</url>
-<url>
-	<loc>https://bencebarens.nl/en/</loc>
-	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
-	<priority>0.8</priority>
 	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/" />
 </url>
 <url>
 	<loc>https://bencebarens.nl/design/</loc>
