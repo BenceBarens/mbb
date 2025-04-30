@@ -1,10 +1,10 @@
 @import url("https://use.typekit.net/zli8vwf.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap');
 
 body {
     background-color: #20343E;
     width: 100%;
-    font-family: "Poppins", serif;
+    font-family: "Inter", serif;
     font-weight: 500;
     font-style: normal;
     color:#F7F4ED;
@@ -842,7 +842,7 @@ input, textarea{
     border: none;
     border-bottom: 0.2rem solid #6C837B;
     background: none;
-    font-family: "Poppins", serif;
+    font-family: "Inter", serif;
     font-size: 1.1rem;
     margin-bottom: 3rem;
     margin-top: 0.5rem;
