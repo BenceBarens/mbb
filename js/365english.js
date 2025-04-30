@@ -14,7 +14,7 @@ const grid = document.getElementById('image-grid');
       const img = document.createElement('img');
       img.src = src;
       img.loading = 'lazy';
-      img.alt = `Afbeelding ${number}`;
+      img.alt = `Image ${number}`;
       img.onclick = () => openLightbox(index);
       grid.appendChild(img);
     }
