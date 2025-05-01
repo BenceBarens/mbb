@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /school/
+Sitemap: https://bencebarens.nl/sitemap.xml

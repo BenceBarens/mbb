@@ -749,26 +749,26 @@ footer div{
     font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 768px) {
-    .highlightP{
-        font-size: 1.4rem;
-    }
-}
-
 #about3 p{
     font-size: 1.2rem;
 }
+
 @media only screen and (min-width: 768px) {
-#about3{
-    border-left: #6C837B 0.2rem solid;
-    padding-left: 3rem;
-}
+    #about3{
+        border-left: #6C837B 0.2rem solid;
+        padding-left: 3rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     #about1> img{
         width: 7rem;
         height: 7rem;
+    }
+
+    #about1{
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #about1 div img{
@@ -783,6 +783,9 @@ footer div{
         align-items: center;
     }
 
+    .highlightP{
+        font-size: 1.4rem;
+    }
 
     #about1 div{
         margin-left: 0;
