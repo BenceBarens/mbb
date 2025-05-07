@@ -23,70 +23,83 @@
     <meta property="og:url" content="https://bencebarens.nl/404.html">
 </head>
 <body class="error404">
-    <header class="desktop-header" aria-hidden="true">
-        <nav>
-            <ul>
-                <li><a href="https://bencebarens.nl/"><img src="https://bencebarens.nl/img/logo.svg" alt="Logo van Bence Barens." width="50"></a></li>
-                <li><a href="https://bencebarens.nl/">Home</a></li>
-                <li><a href="https://bencebarens.nl/design/">Portfolio</a></li>
-                <li><a href="https://bencebarens.nl/about/">About</a></li>
-                <li><a href="https://bencebarens.nl/contact/">Contact</a></li>
+<header class="desktop-header" aria-hidden="true">
+    <nav>
+        <ul>
+            <li><a href="https://bencebarens.nl/"><img src="https://bencebarens.nl/img/logo.svg" alt="Logo van Bence Barens." width="50"></a></li>
+            <li><a href="https://bencebarens.nl/">Home</a></li>
+            <li><a href="https://bencebarens.nl/design/">Portfolio</a></li>
+            <li><a href="https://bencebarens.nl/about/">About</a></li>
+            <li><a href="https://bencebarens.nl/contact/">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="language-switcher-desktop">
+        <a href="#" id="switch-lang-desktop">NL</a>
+    </div>
+    
+</header>
+<header class="mobile-header" aria-hidden="true">
+    <nav>
+        <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+            <li><a href="https://bencebarens.nl/">Home</a></li>
+            <li><a href="https://bencebarens.nl/design/">Portfolio</a></li>
+            <li><a href="https://bencebarens.nl/about/">About</a></li>
+            <li><a href="https://bencebarens.nl/contact/">Contact</a></li>
+
+            <li><div class="language-switcher-mobile">
+                <a href="#" id="switch-lang-mobile">NL</a>
+            </div></li>
             </ul>
+        </div>
         </nav>
-        <div class="language-switcher-desktop">
-            <a href="#" id="switch-lang-desktop">NL</a>
-        </div>
+</header>
+
+<main>
+    <div class="error-desktop">
+        <h1>404</h1>
+        <p>Deze pagina bestaat (nog) niet. Sorry voor de teleurstelling. Ik hoop dat ik het kan goedmaken met een potje tetris. Gebruik de pijltjes op het toetsenbord om te spelen.</p>
+        <p>Geen tijd voor spelletjes? <a href="https://bencebarens.nl/">Klik hier</a> om naar de homepagina te gaan.</p>
+    </div>
+    <canvas id="tetris" class="error-desktop"></canvas>
+    <div class="error-mobile">
+        <h1>404</h1>
+        <div class="tenor-gif-embed" data-postid="18656340" data-share-method="host" data-aspect-ratio="1.81818" data-width="100%"><a href="https://tenor.com/view/the-office-accidentfreezone-gif-18656340">The Office GIF</a>from <a href="https://tenor.com/search/the-gifs">The GIFs</a></div>
         
-    </header>
-    <header class="mobile-header" aria-hidden="true">
-        <nav>
-            <div id="menuToggle">
-              <input type="checkbox" id="menuCheckbox">
-              <span></span>
-              <span></span>
-              <span></span>
-              <ul id="menu">
-                <li><a href="https://bencebarens.nl/">Home</a></li>
-                <li><a href="https://bencebarens.nl/design/">Portfolio</a></li>
-                <li><a href="https://bencebarens.nl/about/">About</a></li>
-                <li><a href="https://bencebarens.nl/contact/">Contact</a></li>
+        <p>Deze pagina bestaat (nog) niet. Sorry voor de teleurstelling. <a href="https://bencebarens.nl/">Klik hier</a> om naar de homepagina te gaan.</p>
+    </div>
+</main>
 
-                <li><div class="language-switcher-mobile">
-                    <a href="#" id="switch-lang-mobile">NL</a>
-                </div></li>
-              </ul>
-            </div>
-          </nav>
-    </header>
-
-    <main>
-        <div class="error-desktop">
-            <h1>404</h1>
-            <p>Deze pagina bestaat (nog) niet. Sorry voor de teleurstelling. Ik hoop dat ik het kan goedmaken met een potje tetris. Gebruik de pijltjes op het toetsenbord om te spelen.</p>
-            <p>Geen tijd voor spelletjes? <a href="https://bencebarens.nl/">Klik hier</a> om naar de homepagina te gaan.</p>
+<footer>
+    <div>
+        <div id="footer1">
+            <h2>Samen iets moois maken?</h2>
+            <h2><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C"><img src="https://bencebarens.nl/img/arrow.svg" alt="">hello@bencebarens.nl</a></h2>
         </div>
-        <canvas id="tetris" class="error-desktop"></canvas>
-        <div class="error-mobile">
-            <h1>404</h1>
-            <div class="tenor-gif-embed" data-postid="18656340" data-share-method="host" data-aspect-ratio="1.81818" data-width="100%"><a href="https://tenor.com/view/the-office-accidentfreezone-gif-18656340">The Office GIF</a>from <a href="https://tenor.com/search/the-gifs">The GIFs</a></div>
-            
-            <p>Deze pagina bestaat (nog) niet. Sorry voor de teleurstelling. <a href="https://bencebarens.nl/">Klik hier</a> om naar de homepagina te gaan.</p>
+        <div>
+            <p class="label">Bedrijf</p>
+            <p>KvK: 93199961<br>
+            BTW: NL005009425B72</p>
         </div>
-    </main>
-
-    <footer>
         <div>
             <p class="label">Alle rechten voorbehouden</p>
-            <p>© 2018-2025 Bence Barens</p>
+            <p>© 2018-2025 Bence Barens <br>
+            Laatst geüpdatet in mei 2025
+            </p>
         </div>
-        <div>
-            <p class="label">Email</p>
-            <p><a href="mailto:hello%40bencebarens.nl?subject=Nieuw%20design%20project&body=Hi%20Bence%2C">hello@bencebarens.nl</a></p>
-        </div>
-    </footer>
+    </div>
+    <button onclick="topFunction()" title="Scroll terug omhoog">
+        Terug omhoog
+        <img src="https://bencebarens.nl/img/arrow.svg" alt="">
+    </button>
+</footer>
 
-    <script src="https://bencebarens.nl/js/language.js"></script>
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-    <script src="https://bencebarens.nl/js/tetris.js"></script>
+<script src="https://bencebarens.nl/js/language.js"></script>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<script src="https://bencebarens.nl/js/tetris.js"></script>
 </body>
 </html>

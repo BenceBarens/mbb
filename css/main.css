@@ -4,7 +4,7 @@
 body {
     background-color: #20343E;
     width: 100%;
-    font-family: "Inter", serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     font-style: normal;
     color:#F7F4ED;
@@ -14,6 +14,10 @@ body {
 
 * {
     scroll-behavior: smooth;
+}
+
+* {
+    transform: all 200ms ease;
 }
 
 p{
@@ -68,7 +72,20 @@ a:visited, a:active{
     border: .2rem solid #F7F4ED;
 }
 
-@keyframes paginaOvergang {
+main{
+    min-height: 95vh;
+}
+
+button{
+    background: none;
+}
+
+::selection {
+    background: #6C837B;
+    color: #F7F4ED;
+}
+
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(5rem);
@@ -80,20 +97,56 @@ a:visited, a:active{
     }
 }
 
-
-main {
-    animation: paginaOvergang 0.6s ease;
-    min-height: 100vh;
+@media (prefers-reduced-motion: no-preference) {
+    main {
+        animation: fadeIn 0.6s ease;
+    }
 }
 
-button{
-    background: none;
+/* @keyframes fadeFromRight{
+    to{
+    opacity: 1;
+    }
 }
 
-::selection {
-    background: #6C837B;
-    color: #F7F4ED;
+@media (prefers-reduced-motion: no-preference) {
+
+    main *{
+        animation: fadeFromRight linear forwards;
+        animation-timeline: view();
+        animation-range: normal 15%;
+
+        opacity: .5;
+    }
+
+} */
+
+/* body:after{
+    position:fixed;
+    content: "";
+    top: 0;
+    right: 0;
+    width: .3rem;
+    height: 100vh;
+    background-color: #F7F4ED;
+    scale: 1 0;
+    transform-origin: top;
+    animation: scrollwatcher linear 1s;
+    animation-timeline: scroll();
 }
+
+@keyframes scrollwatcher {
+    to{scale: 1 1;}
+}
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  } */
 
 /* HEADER ------------------------------------------------------------------------------------------- */
 
@@ -298,21 +351,74 @@ header nav a{
 /*FOOTER-------------------------------------------------------------------------------------------*/
 
 footer{
+    width: 100%;
+    position: relative;
+}
+
+footer>div{
     background-color: #6C837B;
-    padding: 1rem;
+    padding: 2rem;
     margin-top: 5rem;
+    margin-right: 4rem;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
     border-top-right-radius: 1rem;
-    margin-right: 0.5rem;
-    position: relative;
+}
+
+footer div div{
+    margin-right: 4rem;
+}
+
+footer div img{
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* #footer1 a:hover{
+    padding-left: 1rem;
+} */
+
+footer h2{
+    font-size: 2.5rem;
+}
+
+#footer1:first-child{
+    color:#20343E;
+}
+
+footer button{
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-90deg) translateX(100%);
+    transform-origin:  right bottom;
+    backface-visibility: hidden;
+    padding:1rem;
+    height: 4rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    color:#F7F4ED;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="white" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
+}
+
+footer button img{
+    width: 2rem;
+    margin-left: .5rem;
+    margin-top: .1rem;
 }
 
 @media only screen and (max-width: 768px) {
-    footer{
+    
+    footer>div{
         border-top-right-radius: 0;
         margin-right: 0;
+    }
+
+    footer h2{
+        font-size: 1.8rem;
     }
 
     footer::before {
@@ -325,12 +431,15 @@ footer{
         background-color: transparent;
         border-radius: 0 0 4rem 4rem;
         box-shadow: 0 4rem 0 0 #6C837B;
+        z-index: -1;
+      }
+
+      footer button{
+        display: none;
       }
 
 }
-footer div{
-    padding-right: 3rem;
-}
+
 
 /*HOME---------------------------------------------------------------------------------------------*/
 
@@ -568,6 +677,12 @@ footer div{
 @media only screen and (max-width: 768px) {
     .design main{
         margin-top:0;
+    }
+
+    .portfolio{
+        max-width: 25rem;
+        margin: auto;
+        margin-top: 1rem;
     }
     
     .portfolio h1{
@@ -884,8 +999,9 @@ input:focus, textarea:focus{
 
 .label{
     text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-bottom:-0.5rem;
+    font-size: 0.8rem;
+    margin-bottom:-1rem;
+    margin-top: 1.5rem;
     opacity: 80%;
 }
 
@@ -897,7 +1013,7 @@ input:focus, textarea:focus{
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: paginaOvergang 0.6s;
+    animation: fadeIn 0.6s;
 }
 
 @media only screen and (max-width: 768px) {
@@ -924,7 +1040,7 @@ input:focus, textarea:focus{
         align-self: flex-start;
         justify-content: left;
         text-align: left;
-        animation: paginaOvergang 0.6s;
+        animation: fadeIn 0.6s;
     }
 }
 
