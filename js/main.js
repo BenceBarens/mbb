@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let userLang = navigator.language || navigator.userLanguage;
     let savedLang = localStorage.getItem("preferredLang");
 
-    // Redirect op basis van browsertaal als er geen voorkeur is opgeslagen
     if (!savedLang) {
         if (userLang.startsWith("en") && !currentPath.startsWith("/en/")) {
             localStorage.setItem("preferredLang", "en");
@@ -17,20 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Taalkoppeling voor desktop
     if (currentPath.startsWith("/en/")) {
         langSwitchDesktop.href = currentPath.replace("/en/", "/");
-        langSwitchDesktop.textContent = "NL"; // Toon NL voor desktop
+        langSwitchDesktop.textContent = "NL";
         langSwitchMobile.href = currentPath.replace("/en/", "/");
-        langSwitchMobile.textContent = "NL"; // Toon NL voor mobiel
+        langSwitchMobile.textContent = "NL";
     } else {
         langSwitchDesktop.href = "/en" + currentPath;
-        langSwitchDesktop.textContent = "EN"; // Toon EN voor desktop
+        langSwitchDesktop.textContent = "EN";
         langSwitchMobile.href = "/en" + currentPath;
-        langSwitchMobile.textContent = "EN"; // Toon EN voor mobiel
+        langSwitchMobile.textContent = "EN";
     }
 
-    // Sla de voorkeur op bij klikken
+
     langSwitchDesktop.addEventListener("click", function () {
         if (currentPath.startsWith("/en/")) {
             localStorage.setItem("preferredLang", "nl");
@@ -51,6 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // SCROLL TO TOP BUTTON ----------------------------------------------------------------------------------
 
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
