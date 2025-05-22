@@ -6,13 +6,37 @@
     margin-right: -2rem;
 }
 
+p{
+    max-width: 40rem;
+}
+
 #detail2 img{
     max-width: 90%;
     margin: auto;
+    margin-bottom: 4rem;
 }
 
 @media only screen and (max-width: 768px) {
     #detail2 img{
         max-width: 50rem;
+    }
+}
+
+#detail3{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    background-color: red;
+}
+
+#detail3 img{
+    max-width: 20rem;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #detail3{
+        flex-wrap: wrap;
     }
 }
