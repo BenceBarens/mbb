@@ -68,11 +68,44 @@
         <p>This project was part of my study <a href="https://www.hva.nl/opleidingen/communication-and-multimedia-design" target="_blank">Communication & Multimedia Design (AUAS)</a>. The assignment was to design an interactive application in three weeks that makes an invisible or unused sub-community within CMD visible, active and connected. The solution had to be both online and offline and fit within the context of the Amstelcampus.</p>
     </section>
     <section id="detail2">
-        <img src="https://bencebarens.nl/design/voices/img/figma.png" alt="Five screens of a Voices mobile app. The screen captions read: 'See the schedule for the next Voices', 'Submit topics to be discussed', 'Vote on topics and decide what gets discussed', 'Learn more about Voices hosts and sign up', and 'Customize your host profile and host Voices yourself.'">
-        <!-- <iframe style="border: none" width="200" height="450" src="https://embed.figma.com/proto/uCOPbOhskGAB0kSbucATIl/Project-Included?page-id=17%3A14&node-id=22-4370&p=f&viewport=293%2C371%2C0.55&scaling=scale-down&content-scaling=fixed&starting-point-node-id=22%3A4370&hotspot-hints=0&embed-host=share" allowfullscreen></iframe> -->
+        <img src="https://bencebarens.nl/design/voices/images/figma.png" alt="Five screens of a Voices mobile app. The screen captions read: 'See the schedule for the next Voices', 'Submit topics to be discussed', 'Vote on topics and decide what gets discussed', 'Learn more about Voices hosts and sign up', and 'Customize your host profile and host Voices yourself.'">
     </section>
-    <section>
-        <p class="label">This page is still incomplete and will be supplemented soon</p>
+    <section id="detail3">
+        <div>
+            <p>By interviewing various CMD'ers, I arrived at the target group "beginning entrepreneurs." A second round of interviews gave me more insight into what beginning entrepreneurs need. I recorded this in a user persona.</p>
+            <p>I then researched other similar solutions used by the target group and benchmarked them. Based on this, I came up with a first concept of the solution.</p>
+            <p>Using storyboards and test versions, I further expanded and improved the solution together with test subjects from the target group to a final product: CMD Voices.</p>
+        </div>
+        <img src="https://bencebarens.nl/design/voices/images/voices-poster.jpg" alt="A poster by CMD Voices. The poster shows the design process in the components 'design challenge', 'user persona', 'benchmarking', 'ethical reflection' and 'concept'.">
+    </section>
+    <section id="detail4">
+        <div class="trigger-button" onclick="openLightbox()">
+            <img src="https://bencebarens.nl/design/voices/images/phone.png" alt="">
+            <p>Open interactive prototype (Dutch only)</p>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <div class="overlay" onclick="closeLightbox()"></div>
+            <div class="lightbox-content">
+            <iframe src="https://embed.figma.com/proto/uCOPbOhskGAB0kSbucATIl/Project-Included?page-id=17%3A14&node-id=22-4370&p=f&viewport=293%2C371%2C0.55&scaling=scale-down&content-scaling=fixed&starting-point-node-id=22%3A4370&hotspot-hints=0&embed-host=share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <script>
+            const lightbox = document.getElementById("lightbox");
+
+            function openLightbox() {
+            lightbox.classList.add("active");
+            }
+
+            function closeLightbox() {
+            lightbox.classList.remove("active");
+            }
+        </script>
+        <div>
+            <p>CMD Voices is a platform for and by students who are entrepreneurs in addition to their studies. Using an app, they can submit topics, vote on what should be discussed and register as a host of a low-threshold meeting on campus. These meetings - the “Voices” - take place in a familiar space within CMD, where students share experiences, questions and tips with each other.</p>
+            <p>To involve students who do not dare to participate directly, there is a video booth on location where you can record your story, question or appeal. It is all about recognition, visibility and connection between students who often work independently, but could benefit a lot from each other. CMD Voices makes this community visible and active - without becoming formal or complicated.</p>
+        </div>
     </section>
 
 

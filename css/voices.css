@@ -13,7 +13,6 @@ p{
 #detail2 img{
     max-width: 90%;
     margin: auto;
-    margin-bottom: 4rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -22,29 +21,51 @@ p{
     }
 }
 
-#detail3{
+#detail3, #detail4{
     display: flex;
     flex-wrap: wrap;
-    width: auto;
+    margin-top: 4rem;
+    justify-content: space-around;
 }
 
 #detail3 img{
     max-width: 20rem;
-    margin: auto;
     border-radius: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
-    #detail3{
+    #detail3, #detail4{
         flex-wrap: wrap;
+    }
+
+    #detail3 img{
+        max-width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
     }
 }
 
 .trigger-button {
-    font-family: moret, serif;
-    font-size: 1.5rem;
     transition: all 0.2s ease;
     cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="white" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.trigger-button p{
+    position: absolute;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.trigger-button img{
+    width: 10rem;
+    opacity: .2;
+    background-color: #6C837B;
+    border-radius: 1.5rem;
 }
 
 .trigger-button:hover {
@@ -52,6 +73,7 @@ p{
 }
 
 .lightbox {
+    opacity: 0;
     display: none;
     position: fixed;
     z-index: 999;
@@ -61,12 +83,19 @@ p{
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    transition: opacity 0.2s ease;
 }
 
 .lightbox.active {
     display: flex;
+    opacity: 1;
 }
+
+.lightbox.active .lightbox-content {
+    animation: fadeIn 0.6s ease;
+}
+
 
 .lightbox-content {
     background: white;
@@ -76,7 +105,6 @@ p{
     z-index: 2;
     max-width: 90%;
     max-height: 90%;
-    animation: fadeIn 0.6s ease;
 }
 
 .lightbox iframe {
@@ -90,4 +118,14 @@ p{
     top: 0; left: 0;
     width: 100%; height: 100%;
     z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .trigger-button{
+        display: none;
+    }
+    
+    .lightbox{
+        display: none;
+    }
 }
