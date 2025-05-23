@@ -1,0 +1,12 @@
+#detail2 {
+    column-count: 3;
+    column-gap: 1em;
+}
+
+#detail2 img {
+    width: 100%;
+    margin-bottom: 1em;
+    break-inside: avoid;
+    border-radius: 1rem;
+    background: radial-gradient(at left top, #6C837B, #20343e);
+}
