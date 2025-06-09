@@ -10,3 +10,15 @@
     border-radius: 1rem;
     background: radial-gradient(at left top, #6C837B, #20343e);
 }
+
+@media only screen and (max-width: 950px) {
+    #detail2 {
+        column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #detail2 {
+        column-count: 1;
+    }
+}
