@@ -50,6 +50,14 @@
 </url>
 
 <url>
+	<loc>https://bencebarens.nl/design/transitmap/</loc>
+	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
+	<priority>0.6</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/transitmap" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/transitmap" />
+</url>
+
+<url>
 	<loc>https://bencebarens.nl/en/design/</loc>
 	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
 	<priority>0.6</priority>
@@ -79,6 +87,14 @@
 	<priority>0.4</priority>
 	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/365" />
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/365" />
+</url>
+
+<url>
+	<loc>https://bencebarens.nl/en/design/transitmap/</loc>
+	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
+	<priority>0.4</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/transitmap" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/transitmap" />
 </url>
 
 <url>
