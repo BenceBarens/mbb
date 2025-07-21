@@ -98,6 +98,8 @@
         <label for="entry.74498222">04. Wat voor service heb je nodig?</label>
         <input type="text" name="entry.74498222" id="entry.74498222" placeholder="Web design, grafisch vormgeven, etc." required>
 
+        <input type="text" name="extra_field" style="display:none">
+
         <label for="entry.410020173">05. Je bericht</label>
         <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, ik heb jouw hulp nodig met..." required rows="5"></textarea>
 
@@ -109,18 +111,20 @@
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();  
+    if (formData.get('extra_field') === "") {
+        event.preventDefault();  
 
-    let formData = new FormData(this);
+        let formData = new FormData(this);
 
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse", {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-    }).then(() => {
-        this.style.display = "none";  
-        document.getElementById("responseMessage").style.display = "flex";  
-    }).catch(error => console.error("Er lijkt iets fout te zijn gegaan. Ververs de pagina en probeer het opnieuw.", error));
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse", {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        }).then(() => {
+            this.style.display = "none";  
+            document.getElementById("responseMessage").style.display = "flex";  
+        }).catch(error => console.error("Er lijkt iets fout te zijn gegaan. Ververs de pagina en probeer het opnieuw.", error));
+    }
 });
 </script>
 
