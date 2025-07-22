@@ -1,3 +1,5 @@
+/* Website Made by Bence (All rights reserved © 2018-2025 Bence Barens) */
+
 @import url("https://use.typekit.net/zli8vwf.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap');
 
@@ -14,10 +16,8 @@ body {
 
 * {
     scroll-behavior: smooth;
-}
-
-* {
     transform: all 200ms ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
 p{
@@ -320,7 +320,7 @@ footer button img{
 
 @media only screen and (max-width: 768px) {
     footer{
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
     }
     
     footer>div{
