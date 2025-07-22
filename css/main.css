@@ -211,7 +211,6 @@ header .currentPage::after {
         bottom: 0;
         width: 100%;
         z-index: 10;
-        justify-content: space-around;
         padding-bottom: .7rem;
         padding-top: .5rem;
         flex-wrap: nowrap;
@@ -226,11 +225,14 @@ header .currentPage::after {
         display: none;
     }
 
-    header .language-switcher-desktop{
-        position: fixed;
-        top: 1rem;
-        right: 0;
-        color: #F7F4ED;
+    header nav ul{
+        gap: 0;
+        flex-wrap: nowrap;
+        margin: 1rem .5rem;
+    }
+
+    header nav a{
+        padding: 1rem .7rem;
     }
 }
 
@@ -291,7 +293,7 @@ footer h2{
     font-size: 2.5rem;
 }
 
-#footer1:first-child{
+#footer1 h2:first-child{
     color:#20343E;
 }
 
