@@ -212,8 +212,10 @@ header .currentPage::after {
         width: 100%;
         z-index: 10;
         justify-content: space-around;
-        padding-bottom: .2rem;
+        padding-bottom: .7rem;
+        padding-top: .5rem;
         flex-wrap: nowrap;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 1.5rem;
     }
     
     header .currentPage::after{
@@ -345,11 +347,11 @@ footer button img{
         border-radius: 0 0 4rem 4rem;
         box-shadow: 0 4rem 0 0 #6C837B;
         z-index: -1;
-      }
+    }
 
-      footer button{
+    footer button{
         display: none;
-      }
+    }
 
 }
 
