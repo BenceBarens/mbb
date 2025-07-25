@@ -4,15 +4,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap');
 
 body {
-    background-color: #20343E;
+    background-color: #F7F4ED;
     width: 100%;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-style: normal;
-    color:#F7F4ED;
+    color:#20343E;
     margin: 0;
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0.9" /%3E%3C/svg%3E') 16 16, auto;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="black" fill-opacity="0.5" /%3E%3C/svg%3E') 16 16, auto;
 }
+
+.bg-dots {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 1.5rem 1.5rem;
+  background-repeat: repeat;
+  opacity: 1;
+  pointer-events: none;
+  will-change: background-position;
+}
+
+
+.bg-gradient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+    circle 50vw at var(--x, 50%) var(--y, 50%),
+    rgb(203, 221, 206),
+    rgba(247, 244, 237, 0.5)
+  );
+  transition: background-position 0.1s;
+}
+
 
 * {
     scroll-behavior: smooth;
@@ -58,7 +85,7 @@ a:hover{
     color: inherit;
     text-decoration-color: inherit;
     text-decoration-thickness: 0.2rem;
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="white" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="black" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
 }
 
 a:visited, a:active{
@@ -69,7 +96,7 @@ a:visited, a:active{
     width: 2rem;
     height: auto;
     border-radius: 50%;
-    border: .2rem solid #F7F4ED;
+    border: .2rem solid #20343E;
 }
 
 main{
@@ -78,11 +105,11 @@ main{
 
 button{
     background: none;
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="white" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"%3E%3Ccircle cx="16" cy="16" r="14" fill="white" fill-opacity="0" stroke="black" stroke-width="2" /%3E%3C/svg%3E') 16 16, auto;
 }
 
 ::selection {
-    background: #6C837B;
+    background: #20343E;
     color: #F7F4ED;
 }
 
@@ -197,11 +224,11 @@ header nav a:hover::after{
     width: 60%;
     border-radius: 2rem;
     height: .2rem;
-    background-color: #F7F4ED;
+    background-color: #20343E;
 }
 
 header .currentPage::after {
-    background-color: #F7F4ED;
+    background-color: #20343E;
 }
 
 @media screen and (max-width: 768px) {
@@ -246,21 +273,21 @@ header .currentPage::after {
   }
 
   *::-webkit-scrollbar-track {
-    background-color: #20343E;
+    background-color: #F7F4ED;
   }
   
   *::-webkit-scrollbar-thumb {
     border-radius: 2rem;
     background-color: #6C837B;
-    border: 0.3rem solid #20343E;
+    border: 0.3rem solid #F7F4ED;
   }
   
   *::-webkit-scrollbar-thumb:hover {
-    background-color: #F7F4ED;
+    background-color: #20343E;
   }
   
   *::-webkit-scrollbar-thumb:active {
-    background-color: #F7F4ED;
+    background-color: #20343E;
   }
   
 
@@ -273,6 +300,7 @@ footer{
 
 footer>div{
     background-color: #6C837B;
+    color:#F7F4ED;
     padding: 2rem;
     margin-top: 5rem;
     margin-right: 4rem;
@@ -539,7 +567,7 @@ footer button img{
     display: flex;
     border-radius: 1.85rem;
     align-items: center;
-    background-color: #20343E;
+    background-color: #F7F4ED;
     transition: all 200ms ease;
     flex-wrap: wrap;
     width:100%;
