@@ -1,4 +1,4 @@
-/* Website Made by Bence (All rights reserved © 2018-2025 Bence Barens) */
+/* Website Made by Bence (All rights reserved © 2018 Bence Barens) */
 
 @import url("https://use.typekit.net/zli8vwf.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap');
@@ -219,6 +219,7 @@ header .currentPage::after {
     
     header .currentPage::after{
         background-color: #20343E;
+        bottom: 0.4rem;
     }
 
     header nav ul li:first-child{

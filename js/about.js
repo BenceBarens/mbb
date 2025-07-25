@@ -17,9 +17,9 @@ function hideCursor() {
 }
 
 // Event Listeners voor de hover elementen
-document.getElementById('aboutp1').addEventListener('mouseenter', () => setCursor('../img/ff.png'));
-document.getElementById('aboutp2').addEventListener('mouseenter', () => setCursor('../img/koffie.jpg'));
-document.getElementById('aboutp3').addEventListener('mouseenter', () => setCursor('../img/hva.jpg'));
+document.getElementById('aboutp1').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/ff.png'));
+document.getElementById('aboutp2').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/koffie.jpg'));
+document.getElementById('aboutp3').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/hva.jpg'));
 
 // Cursor verbergen als de muis weggaat
 document.querySelectorAll('#aboutp1, #aboutp2, #aboutp3').forEach(el => {
