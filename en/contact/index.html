@@ -63,45 +63,57 @@
             </ul>
         </section>
     </div>
-    <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse">
+    <form id="contactForm" action="https://formspree.io/f/xldlbakr" method="POST">
 
-        <label for="entry.119957155">01. What's your name?</label>
-        <input type="text" name="entry.119957155" id="entry.119957155" placeholder="Michael Scott" required>
+        <label>01. What's your name?
+            <input type="text" name="name" placeholder="Michael Scott" required>
+        </label>
 
-        <label for="entry.893515591">02. What's your e-mail adress?</label>
-        <input type="email" name="entry.893515591" id="entry.893515591" placeholder="m.scott@dundermifflin.nl" required>
+        <label>02. What's your e-mail adress?
+            <input type="email" name="email" placeholder="m.scott@dundermifflin.com" required>
+        </label>
 
-        <label for="entry.364263748">03. For which company or project are you seeking help?</label>
-        <input type="text" name="entry.364263748" id="entry.364263748" placeholder="Dunder Mifflin Paper Company, Inc." required>
+        <label>03. For which company or project are you seeking help?
+            <input type="text" name="company/project" placeholder="Dunder Mifflin Paper Company, Inc." required>
+        </label>
 
-        <label for="entry.74498222">04. What kind of service are you looking for?</label>
-        <input type="text" name="entry.74498222" id="entry.74498222" placeholder="Web design, graphic design, etc." required>
+        <label>04. What kind of service are you looking for?
+            <input type="text" name="serivce" placeholder="Web design, graphic design, etc." required>
+        </label>
 
-        <label for="entry.410020173">05. Your message</label>
-        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, I need your help with..." required rows="5"></textarea>
+        <label>05. Your message
+            <textarea name="message" placeholder="Hi Bence, I need your help with..." required rows="5"></textarea>
+        </label>
 
         <button type="submit">Send!</button>
-
     </form>
 
-    <p id="responseMessage" class="bevestiging">Thank you for your message!<br>I'll get back to you as soon as possible.</p>
+    <p id="responseMessage" class="bevestiging">Thank you for your message!<br>I'll reach out to you as soon as possible.</p>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();  
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    let formData = new FormData(this);
+    const form = this;
+    const formData = new FormData(form);
 
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse", {
+    fetch(form.action, {
         method: "POST",
         body: formData,
-        mode: "no-cors"
-    }).then(() => {
-        this.style.display = "none";  
-        document.getElementById("responseMessage").style.display = "flex";  
-    }).catch(error => console.error("Er lijkt iets fout te zijn gegaan. Ververs de pagina en probeer het opnieuw.", error));
-});
-</script>
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("responseMessage").style.display = "flex";
+        } else {
+        alert("Something seems to have gone wrong. Please try again or send an e-mail to hello@bencebarens.nl.");
+        }
+    }).catch(error => {
+        console.error("Verzendfout:", error);
+        alert("Something seems to have gone wrong. Please try again or send an e-mail to hello@bencebarens.nl.");
+    });
+    });
+    </script>
 
 </main>
 <footer>
@@ -118,7 +130,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         <div>
             <p class="label">All rights reserved</p>
             <p>© 2018-2025 Bence Barens <br>
-            Last updated in May 2025
+            Last updated in July 2025
             </p>
         </div>
     </div>

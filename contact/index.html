@@ -63,49 +63,57 @@
             </ul>
         </section>
     </div>
-    <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse">
+    <form id="contactForm" action="https://formspree.io/f/xldlbakr" method="POST">
 
-        <label for="entry.119957155">01. Hoe heet je?</label>
-        <input type="text" name="entry.119957155" id="entry.119957155" placeholder="Michael Scott" required>
+        <label>01. Hoe heet je?
+            <input type="text" name="name" placeholder="Michael Scott" required>
+        </label>
 
-        <label for="entry.893515591">02. Wat is jouw e-mailadres?</label>
-        <input type="email" name="entry.893515591" id="entry.893515591" placeholder="m.scott@dundermifflin.nl" required>
+        <label>02. Wat is jouw e-mailadres?
+            <input type="email" name="email" placeholder="m.scott@dundermifflin.nl" required>
+        </label>
 
-        <label for="entry.364263748">03. Voor welk bedrijf of met welk project kan ik helpen?</label>
-        <input type="text" name="entry.364263748" id="entry.364263748" placeholder="Dunder Mifflin Paper Company, Inc." required>
+        <label>03. Voor welk bedrijf of met welk project kan ik helpen?
+            <input type="text" name="company/project" placeholder="Dunder Mifflin Paper Company, Inc." required>
+        </label>
 
-        <label for="entry.74498222">04. Wat voor service heb je nodig?</label>
-        <input type="text" name="entry.74498222" id="entry.74498222" placeholder="Web design, grafisch vormgeven, etc." required>
+        <label>04. Wat voor service heb je nodig?
+            <input type="text" name="serivce" placeholder="Web design, grafisch vormgeven, etc." required>
+        </label>
 
-        <input type="text" name="extra_field" style="display:none">
-
-        <label for="entry.410020173">05. Je bericht</label>
-        <textarea name="entry.410020173" id="entry.410020173" placeholder="Hi Bence, ik heb jouw hulp nodig met..." required rows="5"></textarea>
+        <label>05. Je bericht
+            <textarea name="message" placeholder="Hi Bence, ik heb jouw hulp nodig met..." required rows="5"></textarea>
+        </label>
 
         <button type="submit">Verstuur!</button>
-
     </form>
 
     <p id="responseMessage" class="bevestiging">Dank voor je bericht!<br>Ik neem zo snel mogelijk contact op.</p>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    if (formData.get('extra_field') === "") {
-        event.preventDefault();  
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-        let formData = new FormData(this);
+    const form = this;
+    const formData = new FormData(form);
 
-        fetch("https://docs.google.com/forms/d/e/1FAIpQLSeA5KgOwatZhcPjuWtC4iUcFV6rgmziu6f0whqQsc6GS3BljQ/formResponse", {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-        }).then(() => {
-            this.style.display = "none";  
-            document.getElementById("responseMessage").style.display = "flex";  
-        }).catch(error => console.error("Er lijkt iets fout te zijn gegaan. Ververs de pagina en probeer het opnieuw.", error));
-    }
-});
-</script>
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("responseMessage").style.display = "flex";
+        } else {
+        alert("Er lijkt iets mis te zijn gegaan. Probeer het opnieuw of stuur je mailtje naar hello@bencebarens.nl.");
+        }
+    }).catch(error => {
+        console.error("Verzendfout:", error);
+        alert("Verzenden mislukt. Probeer het opnieuw.");
+    });
+    });
+    </script>
 
 </main>
 <footer>
@@ -122,7 +130,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         <div>
             <p class="label">Alle rechten voorbehouden</p>
             <p>© 2018-2025 Bence Barens <br>
-            Laatst geüpdatet in mei 2025
+            Laatst geüpdatet in juli 2025
             </p>
         </div>
     </div>
