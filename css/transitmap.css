@@ -29,6 +29,7 @@
     margin-bottom: 1rem;
     break-inside: avoid;
     border-radius: 1rem;
+    border: #6C837B .2rem solid;
     background: radial-gradient(at left top, #6C837B, #20343e);
 }
 
