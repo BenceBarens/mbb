@@ -500,7 +500,7 @@ footer button img{
     border-bottom: 2.7rem solid var(--color-white);
 }
 
-.home .splash-mobile > img{
+.home .splash-mobile > a img{
     width: 5rem;
     transform: rotate(90deg);
 }
@@ -570,7 +570,6 @@ footer button img{
     }
 
     #home2{
-        padding-top: 0;
         margin-top: 0;
     }
 
@@ -581,6 +580,11 @@ footer button img{
     #home3 h2{
         font-size: 2rem;
         text-align: center;
+    }
+
+    html, body {
+        overscroll-behavior-y: contain;
+        touch-action: pan-y;
     }
 }
 
