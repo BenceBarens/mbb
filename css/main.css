@@ -28,6 +28,10 @@
     --cursor-grab: grab;
 }
 
+html{
+    scroll-snap-type: y proximity;
+}
+
 img[src$=".svg"] {
     filter: brightness(0) saturate(100%) invert(16%) sepia(16%) saturate(1254%) hue-rotate(156deg) brightness(95%) contrast(90%);
 }
@@ -58,7 +62,7 @@ body::after{
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -10;
     background-image: radial-gradient(var(--color-on-primary) 1px, transparent 1px);
     background-size: 2rem 2rem;
     background-repeat: repeat;
@@ -438,7 +442,7 @@ footer button img{
 .draggable{
     user-select: none;
     cursor: var(--cursor-grab);
-    filter: drop-shadow(12px 10px 18px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0.5rem 0.5rem 1rem rgba(32, 52, 62, 0.3));
 }
 
 .draggable:nth-child(1) { transform: rotate(-2deg); }
@@ -680,9 +684,8 @@ footer button img{
     .portfolio{
         max-width: 25rem;
         margin: auto;
-        margin-top: 1rem;
     }
-    
+
     .portfolio h1{
         font-size: 2rem;
     }
@@ -709,7 +712,8 @@ footer button img{
         border: none;
         background-color: var(--color-secondary);
         margin-bottom: 2rem;
-        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        scroll-snap-align: center;
     }
 
     .portfolio .label{
