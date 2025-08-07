@@ -681,7 +681,6 @@ footer button img{
         max-width: 25rem;
         margin: auto;
         margin-top: 1rem;
-        scroll-snap-type: y mandatory;
     }
     
     .portfolio h1{
@@ -711,7 +710,6 @@ footer button img{
         background-color: var(--color-secondary);
         margin-bottom: 2rem;
         scroll-snap-align: start;
-        scroll-snap-stop: always;
     }
 
     .portfolio .label{

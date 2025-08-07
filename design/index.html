@@ -123,5 +123,50 @@
     </button>
 </footer>
 <script src="../js/main.js"></script>
+<script>
+  const container = document.querySelector('.portfolio');
+  const items = Array.from(container.querySelectorAll('li'));
+  let currentIndex = 0;
+  let isScrolling = false;
+  let touchStartY = 0;
+
+  // Alleen uitvoeren op touch devices
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+
+    container.setAttribute('tabindex', '0'); // Voor keyboard fallback (optioneel)
+
+    function scrollToIndex(index) {
+      if (index < 0 || index >= items.length) return;
+      isScrolling = true;
+      items[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      currentIndex = index;
+      setTimeout(() => isScrolling = false, 500);
+    }
+
+    container.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+    });
+
+    container.addEventListener('touchend', (e) => {
+      if (isScrolling) return;
+
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaY = touchStartY - touchEndY;
+
+      // Swipe threshold
+      if (Math.abs(deltaY) > 50) {
+        if (deltaY > 0) {
+          // Swipe up
+          scrollToIndex(currentIndex + 1);
+        } else {
+          // Swipe down
+          scrollToIndex(currentIndex - 1);
+        }
+      }
+    });
+  }
+</script>
+
+
 </body>
 </html>
