@@ -62,15 +62,9 @@ body::after{
     background-image: radial-gradient(var(--color-on-primary) 1px, transparent 1px);
     background-size: 2rem 2rem;
     background-repeat: repeat;
-    opacity: 0.5;
+    opacity: 0.3;
     pointer-events: none;
     will-change: background-position;
-}
-
-@media screen and (max-width: 768px) {
-    body::after{
-        opacity: 0.3;
-    }
 }
 
 /* .gradient-circle{
@@ -262,7 +256,7 @@ header nav a::after{
     transition: all 200ms ease;
 }
 
-header nav a:hover::after{
+header nav a:hover::after, header nav a:active::after{
     width: 60%;
     border-radius: 2rem;
     height: .2rem;
@@ -572,6 +566,7 @@ footer button img{
     #home2 p{
         font-size: 1rem;
         padding: 0;
+        text-align: center;
     }
 
     #home2{
@@ -581,6 +576,11 @@ footer button img{
 
     #home3{
         margin-top: 2rem;
+    }
+
+    #home3 h2{
+        font-size: 2rem;
+        text-align: center;
     }
 }
 
@@ -677,6 +677,7 @@ footer button img{
         max-width: 25rem;
         margin: auto;
         margin-top: 1rem;
+        scroll-snap-type: y mandatory;
     }
     
     .portfolio h1{
@@ -705,6 +706,8 @@ footer button img{
         border: none;
         background-color: var(--color-secondary);
         margin-bottom: 2rem;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
 
     .portfolio .label{
