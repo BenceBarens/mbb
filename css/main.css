@@ -1,7 +1,7 @@
 /* Website Made by Bence (All rights reserved © 2018 Bence Barens) */
 
 @import url("https://use.typekit.net/zli8vwf.css");
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap');
+@font-face{font-family: "Inter"; src: url(inter.ttf) format("truetype"); font-weight: 100 900; font-style: normal; font-display: swap;};
 
 :root {
     --color-primary: rgb(247 244 237);
@@ -12,14 +12,6 @@
     --color-on-secondary: rgb(247 244 237);
     --color-on-tertiary: rgb(247 244 237);
 
-    /* --color-primary: rgb(32 52 62);
-    --color-secondary: rgb(247 244 237);
-    --color-tertiary: rgb(108 131 123);
-
-    --color-on-primary: rgb(247 244 237);
-    --color-on-secondary: rgb(32 52 62);
-    --color-on-tertiary: rgb(247 244 237); */
-
     --color-white: rgb(247 244 237);
     --color-black: rgb(32 52 62); 
 
@@ -28,17 +20,31 @@
     --cursor-grab: grab;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root{
+        --color-primary: rgb(32 52 62);
+        --color-secondary: rgb(247 244 237);
+        --color-tertiary: rgb(108 131 123);
+
+        --color-on-primary: rgb(247 244 237);
+        --color-on-secondary: rgb(32 52 62);
+        --color-on-tertiary: rgb(247 244 237);
+    }
+}
+
 html{
     scroll-snap-type: y proximity;
 }
 
-img[src$=".svg"] {
-    filter: brightness(0) saturate(100%) invert(16%) sepia(16%) saturate(1254%) hue-rotate(156deg) brightness(95%) contrast(90%);
+@media (prefers-color-scheme: light) {
+    img[src$=".svg"] {
+        filter: brightness(0) saturate(100%) invert(16%) sepia(16%) saturate(1254%) hue-rotate(156deg) brightness(95%) contrast(90%);
+    }
 }
 
 body{
     width: 100%;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-style: normal;
     color:var(--color-on-primary);
@@ -63,12 +69,11 @@ body::after{
     position: fixed;
     inset: 0;
     z-index: -10;
-    background-image: radial-gradient(var(--color-on-primary) 1px, transparent 1px);
+    background-image: radial-gradient(var(--color-on-primary) 0.05rem, transparent 0.05rem);
     background-size: 2rem 2rem;
     background-repeat: repeat;
     opacity: 0.3;
     pointer-events: none;
-    will-change: background-position;
 }
 
 /* .gradient-circle{
@@ -310,25 +315,25 @@ header .currentPage::after {
 *::-webkit-scrollbar {
     height: 10px;
     width: 1rem;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background-color: var(--color-primary);
-  }
-  
-  *::-webkit-scrollbar-thumb {
+}
+
+*::-webkit-scrollbar-thumb {
     border-radius: 2rem;
     background-color: var(--color-tertiary);
     border: 0.3rem solid var(--color-primary);
-  }
-  
-  *::-webkit-scrollbar-thumb:hover {
+}
+
+*::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-secondary);
-  }
-  
-  *::-webkit-scrollbar-thumb:active {
+}
+
+*::-webkit-scrollbar-thumb:active {
     background-color: var(--color-secondary);
-  }
+}
   
 
 /*FOOTER-------------------------------------------------------------------------------------------*/
