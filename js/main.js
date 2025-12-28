@@ -52,3 +52,24 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// SCROLL PARALEX ---------------------------------------------------------------------------------------
+
+const bg = document.querySelector('body::after');
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    document.body.style.setProperty('--bg-offset', `${scrollY * -0.5}px`);
+});
+
+// BACK BUTTON -------------------------------------------------------------------------------------------
+
+function goBack(fallbackUrl) {
+  const referrer = document.referrer;
+  const sameOrigin = referrer && new URL(referrer).origin === location.origin;
+
+  if (sameOrigin && history.length > 1) {
+    history.back();
+  } else {
+    location.href = fallbackUrl;
+  }
+}

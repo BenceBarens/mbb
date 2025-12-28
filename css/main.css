@@ -15,10 +15,16 @@
     --color-white: rgb(247 244 237);
     --color-black: rgb(32 52 62); 
 
-    --cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 60 60"%3E%3Cdefs%3E%3Cfilter id="s" x="-50%25" y="-50%25" width="200%25" height="200%25"%3E%3CfeDropShadow dx="0" dy="2" stdDeviation="2" flood-color="%23f7f4ed" flood-opacity="0.6"/%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx="30" cy="30" r="22" fill="none" stroke="%2320343e" stroke-width="3" filter="url(%23s)"/%3E%3C/svg%3E') 20 20, auto;
-    --cursor-hover: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50"%3E%3Cdefs%3E%3Cmask id="cutout"%3E%3Crect width="100%25" height="100%25" fill="white"/%3E%3Cpath d="M32.6 17.0c-5.2 5.2-13.7 5.2-18.9 0m19.1 0.1c-5.2 5.2-5.2 13.7 0 18.9m0-18.9L4.9 46.0" stroke="black" stroke-width="4.9" stroke-linecap="round" stroke-miterlimit="8" fill="none"/%3E%3C/mask%3E%3C/defs%3E%3Cpath d="M7.3 42.2c-9.6-9.6-9.6-25.2 0-34.8 9.6-9.6 25.2-9.6 34.8 0 9.6 9.6 9.6 25.2 0 34.8-9.6 9.6-25.2 9.6-34.8 0" fill="%2320343e" stroke="%23f7f4ed" stroke-width="2" mask="url(%23cutout)" fill-rule="evenodd"/%3E%3C/svg%3E') 20 20, auto;
-    --cursor-grab: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 239 239" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3Cmask id="m"%3E%3Crect width="100%25" height="100%25" fill="black"/%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="white"/%3E%3Cg transform="translate(-1791 -1073)"%3E%3Cpath d="M2004.99 1191.86c-17.67 0-32-14.33-32-32m32.003 33.144c-17.673 0-32 14.327-32 32m32.007-31.998h-95m-93.99-1.148c17.673 0 32-14.325 32-32m-33 33.142c17.67 0 32 14.33 32 32m-32.01-31.99h95m.14 93.98c0-17.67 14.33-32 32-32m-32.144 32.003c0-17.673-14.327-32-32-32m32.998 32.007v-94m-.852-94.99c0 17.673 14.325 32 32 32m-32.142-32c0 17.67-14.33 32-32 32m32.99-32.01v94" stroke="%2320343e" stroke-width="23.633" stroke-linecap="round" fill="none"/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="%2320343e" stroke="%23f7f4ed" stroke-width="2" mask="url(%23m)"/%3E%3C/svg%3E') 20 20, auto;
-    --cursor-text: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 239 239" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3Cmask id="m"%3E%3Crect width="100%25" height="100%25" fill="black"/%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="white"/%3E%3Cg transform="translate(-1485 -1073)"%3E%3Cpath d="M1604.83 1232.01c0 20.44-17.01 37-38 37m38.174-37.002c0 20.434 17.014 37 38 37m-38.173-120.02c0-20.434-17.01-37-38-37M1605 1148.99c0-20.43 17.02-37 38-37" stroke="%2320343e" stroke-width="23.633" stroke-linecap="round" fill="none"/%3E%3Cpath d="m1605 1148.99-.17 83.02" stroke="%2320343e" stroke-width="23.633" stroke-linecap="round" fill="none"/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="%2320343e" stroke="%23f7f4ed" stroke-width="2" mask="url(%23m)"/%3E%3C/svg%3E') 20 20, auto;
+    /* --cursor: default;
+    --cursor-hover: pointer;
+    --cursor-grab: grab;
+    --cursor-grabbing: grabbing;
+    --cursor-text: text; */
+
+    --cursor: url('data:image/svg+xml,<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23a)"><rect x="6.2" y="6.2" width="37" height="37" rx="18.5" stroke="%23f7f4ed" stroke-width="3"/></g><defs><filter id="a" x="0" y="0" width="50.4" height="50.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feMorphology radius=".2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_81_2"/><feOffset dx=".5" dy=".5"/><feGaussianBlur stdDeviation="2.5"/><feColorMatrix values="0 0 0 0 0.12549 0 0 0 0 0.203922 0 0 0 0 0.243137 0 0 0 1 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_81_2"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_81_2" result="shape"/></filter></defs></svg>') 25.5 25.5, auto;
+    --cursor-hover: url('data:image/svg+xml,<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23a)"><g clip-path="url(%23b)"><rect x="4.7" y="4.7" width="40" height="40" rx="20" fill="%2320343e"/><path d="M16.169 16.865a1.9 1.9 0 0 1 2.687 0 7.75 7.75 0 0 0 10.963 0 1.9 1.9 0 0 1 1.592-.538 1.9 1.9 0 0 1 1.208 3.238l-.04.039a7.75 7.75 0 0 0 .026 10.936 1.9 1.9 0 0 1-2.687 2.687 11.5 11.5 0 0 1-3.37-7.592l-16.93 16.93a1.9 1.9 0 0 1-2.687-2.687l16.954-16.954a11.5 11.5 0 0 1-7.716-3.372 1.9 1.9 0 0 1 0-2.687" fill="%23f7f4ed"/></g><rect x="5.7" y="5.7" width="38" height="38" rx="19" stroke="%23f7f4ed" stroke-width="2"/></g><defs><clipPath id="b"><rect x="4.7" y="4.7" width="40" height="40" rx="20" fill="%23fff"/></clipPath><filter id="a" x="0" y="0" width="50.4" height="50.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feMorphology radius=".2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_79_20"/><feOffset dx=".5" dy=".5"/><feGaussianBlur stdDeviation="2.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.12549 0 0 0 0 0.203922 0 0 0 0 0.243137 0 0 0 1 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_79_20"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_79_20" result="shape"/></filter></defs></svg>') 25.5 25.5, auto;
+    --cursor-grab: url('data:image/svg+xml,<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23a)"><rect x="4.7" y="4.7" width="40" height="40" rx="20" fill="%2320343e"/><rect x="5.7" y="5.7" width="38" height="38" rx="19" stroke="%23f7f4ed" stroke-width="2"/><path d="M30.743 34.5a1.5 1.5 0 0 1-1.5 1.5 3.324 3.324 0 0 0-3.321 3.213l.003.138a1.5 1.5 0 0 1-2.97.293 1.5 1.5 0 0 1-.036-.319q0-.057.003-.112a3.324 3.324 0 0 0-3.321-3.186 1.5 1.5 0 0 1 0-3c1.22 0 2.358.346 3.324.944V16.118q.001-.06.007-.116c-.968.6-2.109.949-3.331.949a1.5 1.5 0 0 1 0-3 3.324 3.324 0 0 0 3.322-3.213l-.004-.138a1.5 1.5 0 0 1 2.972-.295q.033.155.034.322l-.002.112a3.323 3.323 0 0 0 3.32 3.186 1.5 1.5 0 0 1 0 3 6.3 6.3 0 0 1-3.325-.946q.007.069.007.139v17.824a6.3 6.3 0 0 1 3.318-.941 1.5 1.5 0 0 1 1.5 1.5" fill="%23f7f4ed"/><path d="M14.897 31.297a1.5 1.5 0 0 1-1.5-1.5 3.324 3.324 0 0 0-3.212-3.321l-.139.003a1.5 1.5 0 0 1-.293-2.97q.155-.035.32-.036l.112.003a3.324 3.324 0 0 0 3.186-3.321 1.5 1.5 0 0 1 3 0c0 1.22-.347 2.358-.945 3.324H33.28q.059.001.116.007a6.3 6.3 0 0 1-.95-3.331 1.5 1.5 0 0 1 3 0 3.324 3.324 0 0 0 3.214 3.322l.137-.004a1.5 1.5 0 0 1 .296 2.972 1.5 1.5 0 0 1-.322.034l-.112-.002a3.323 3.323 0 0 0-3.186 3.32 1.5 1.5 0 0 1-3 0c0-1.22.347-2.359.946-3.325a2 2 0 0 1-.14.007H15.457c.596.965.941 2.1.941 3.318a1.5 1.5 0 0 1-1.5 1.5" fill="%23f7f4ed"/></g><defs><filter id="a" x="0" y="0" width="50.4" height="50.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feMorphology radius=".2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_81_16"/><feOffset dx=".5" dy=".5"/><feGaussianBlur stdDeviation="2.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.12549 0 0 0 0 0.203922 0 0 0 0 0.243137 0 0 0 1 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_81_16"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_81_16" result="shape"/></filter></defs></svg>') 25.5 25.5, auto;
+    --cursor-text: url('data:image/svg+xml,<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(%23a)"><rect x="4.7" y="4.7" width="40" height="40" rx="20" fill="%2320343e"/><rect x="5.7" y="5.7" width="38" height="38" rx="19" stroke="%23f7f4ed" stroke-width="2"/><path d="M17.7 13.53a1.9 1.9 0 0 1 1.9-1.9c1.898 0 3.61.788 4.834 2.052a6.7 6.7 0 0 1 4.81-2.026 1.9 1.9 0 0 1 0 3.8 2.923 2.923 0 0 0-2.922 2.798l.003.1q0 .06-.006.117v12.668q.005.057.006.116 0 .051-.003.101a2.924 2.924 0 0 0 2.921 2.797 1.9 1.9 0 0 1 0 3.8 6.7 6.7 0 0 1-4.81-2.026 6.7 6.7 0 0 1-4.832 2.052 1.9 1.9 0 0 1 0-3.8 2.923 2.923 0 0 0 2.918-2.747V18.381q0-.064.003-.127A2.92 2.92 0 0 0 19.6 15.43a1.9 1.9 0 0 1-1.9-1.9" fill="%23f7f4ed"/></g><defs><filter id="a" x="0" y="0" width="50.4" height="50.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feMorphology radius=".2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_81_7"/><feOffset dx=".5" dy=".5"/><feGaussianBlur stdDeviation="2.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.12549 0 0 0 0 0.203922 0 0 0 0 0.243137 0 0 0 1 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_81_7"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_81_7" result="shape"/></filter></defs></svg>') 25.5 25.5, auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,11 +36,6 @@
         --color-on-primary: rgb(247 244 237);
         --color-on-secondary: rgb(32 52 62);
         --color-on-tertiary: rgb(247 244 237);
-
-        --cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 60 60"%3E%3Cdefs%3E%3Cfilter id="s" x="-50%25" y="-50%25" width="200%25" height="200%25"%3E%3CfeDropShadow dx="0" dy="2" stdDeviation="2" flood-color="%2320343e" flood-opacity="0.6"/%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx="30" cy="30" r="22" fill="none" stroke="%23f7f4ed" stroke-width="3" filter="url(%23s)"/%3E%3C/svg%3E') 20 20, auto;
-        --cursor-hover: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50"%3E%3Cdefs%3E%3Cmask id="cutout"%3E%3Crect width="100%25" height="100%25" fill="white"/%3E%3Cpath d="M32.6 17.0c-5.2 5.2-13.7 5.2-18.9 0m19.1 0.1c-5.2 5.2-5.2 13.7 0 18.9m0-18.9L4.9 46.0" stroke="black" stroke-width="4.9" stroke-linecap="round" stroke-miterlimit="8" fill="none"/%3E%3C/mask%3E%3C/defs%3E%3Cpath d="M7.3 42.2c-9.6-9.6-9.6-25.2 0-34.8 9.6-9.6 25.2-9.6 34.8 0 9.6 9.6 9.6 25.2 0 34.8-9.6 9.6-25.2 9.6-34.8 0" fill="%23f7f4ed" stroke="%2320343e" stroke-width="2" mask="url(%23cutout)" fill-rule="evenodd"/%3E%3C/svg%3E') 20 20, auto;
-        --cursor-grab: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 239 239" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3Cmask id="m"%3E%3Crect width="100%25" height="100%25" fill="black"/%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="white"/%3E%3Cg transform="translate(-1791 -1073)"%3E%3Cpath d="M2004.99 1191.86c-17.67 0-32-14.33-32-32m32.003 33.144c-17.673 0-32 14.327-32 32m32.007-31.998h-95m-93.99-1.148c17.673 0 32-14.325 32-32m-33 33.142c17.67 0 32 14.33 32 32m-32.01-31.99h95m.14 93.98c0-17.67 14.33-32 32-32m-32.144 32.003c0-17.673-14.327-32-32-32m32.998 32.007v-94m-.852-94.99c0 17.673 14.325 32 32 32m-32.142-32c0 17.67-14.33 32-32 32m32.99-32.01v94" stroke="%2320343e" stroke-width="23.633" stroke-linecap="round" fill="none"/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="%23f7f4ed" stroke="%2320343e" stroke-width="2" mask="url(%23m)"/%3E%3C/svg%3E') 20 20, auto;
-        --cursor-text: url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 239 239" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3Cmask id="m"%3E%3Crect width="100%25" height="100%25" fill="black"/%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="white"/%3E%3Cg transform="translate(-1485 -1073)"%3E%3Cpath d="M1604.83 1232.01c0 20.44-17.01 37-38 37m38.174-37.002c0 20.434 17.014 37 38 37m-38.173-120.02c0-20.434-17.01-37-38-37M1605 1148.99c0-20.43 17.02-37 38-37" stroke="%2320343e" stroke-width="23.633" stroke-linecap="round" fill="none"/%3E%3Cpath d="m1605 1148.99-.17 83.02" stroke="%2320343e" stroke-width="23.633" stroke-linecap="round" fill="none"/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Ccircle cx="119.5" cy="119.5" r="119.5" fill="%23f7f4ed" stroke="%2320343e" stroke-width="2" mask="url(%23m)"/%3E%3C/svg%3E') 20 20, auto;
     }
 }
 
@@ -80,22 +81,8 @@ body::after{
     background-repeat: repeat;
     opacity: 0.3;
     pointer-events: none;
+    background-position: 0 var(--bg-offset);
 }
-
-/* .gradient-circle{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: -5;
-    width: 50vw;
-    height: 50vw;
-    mix-blend-mode:multiply;
-    pointer-events: none;
-    filter: contrast(170%) brightness(1000%) saturate(5%);
-    opacity: 0.3;
-    background: 
-        radial-gradient(circle at 50% 50%, rgb(0, 133, 0), rgba(0,0,0,0)),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-} */
 
 * {
     scroll-behavior: smooth;
@@ -150,53 +137,6 @@ a:visited, a:active{
 main{
     min-height: 95vh;
 }
-
-/* @keyframes fadeFromRight{
-    to{
-    opacity: 1;
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-
-    main *{
-        animation: fadeFromRight linear forwards;
-        animation-timeline: view();
-        animation-range: normal 15%;
-
-        opacity: .5;
-    }
-
-} */
-
-/* body:after{
-    position:fixed;
-    content: "";
-    top: 0;
-    right: 0;
-    width: .3rem;
-    height: 100vh;
-    background-color: #F7F4ED;
-    scale: 1 0;
-    transform-origin: top;
-    animation: scrollwatcher linear 1s;
-    animation-timeline: scroll();
-}
-
-@keyframes scrollwatcher {
-    to{scale: 1 1;}
-}
-
-html::-webkit-scrollbar {
-    display: none;
-  }
-
-  html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  } */
-
-
 
 button{
     background: none;
@@ -438,7 +378,6 @@ footer button img{
 
 }
 
-
 /*HOME---------------------------------------------------------------------------------------------*/
 
 .home .splash {
@@ -454,6 +393,10 @@ footer button img{
     user-select: none;
     cursor: var(--cursor-grab);
     filter: drop-shadow(0.5rem 0.5rem 1rem rgba(32, 52, 62, 0.3));
+}
+
+.draggable:active{
+    cursor: var(--cursor-grabbing);
 }
 
 .draggable:nth-child(1) { transform: rotate(-2deg); }
@@ -641,6 +584,7 @@ footer button img{
     width: 10rem;
     border-radius: 1.85rem;
     border: var(--color-tertiary) 0.2rem solid;
+    filter: none;
 }
 
 .portfolio a > img{
@@ -793,6 +737,13 @@ footer button img{
 }
 
 @media only screen and (max-width: 768px) {
+
+    .artbyant, .voices, .daysofdesign, .ricetta{
+    
+        main{
+            padding: 1rem;
+        }
+    }
     
     #detail1 button{
         margin-left: -1rem;
@@ -1003,17 +954,21 @@ input:focus, textarea:focus{
 
 .contact form button{
     font-family: moret, serif;
+    background-color: var(--color-tertiary);
+    color: var(--color-on-tertiary);
     font-size: 2rem;
     border-radius: 10rem;
-    padding: .5rem 1.5rem;
-    background:none;
+    padding: 1rem 2rem;
     align-self: flex-end;
     transition: all 200ms ease;
     border: var(--color-primary) 0.2rem solid;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 .contact form button:hover{
-    border: var(--color-tertiary) 0.2rem solid;
+    padding: 1rem 2.5rem;
+    text-decoration-color: var(--color-on-tertiary);
 }
 
 .label{
