@@ -1,27 +1,24 @@
 const cursor = document.querySelector('.custom-cursor');
 
-// Laat de cursor de muis volgen
 document.addEventListener('mousemove', (e) => {
-cursor.style.left = `${e.clientX}px`; // `clientX` = X-positie binnen het scherm
-cursor.style.top = `${e.clientY}px`;  // `clientY` = Y-positie binnen het scherm
+cursor.style.left = `${e.clientX}px`;
+cursor.style.top = `${e.clientY}px`;
 });
 
 
 function setCursor(image) {
     cursor.style.backgroundImage = `url('${image}')`;
-    cursor.style.opacity = '1'; // Fade-in effect
+    cursor.style.opacity = '1';
 }
 
 function hideCursor() {
-    cursor.style.opacity = '0'; // Fade-out effect
+    cursor.style.opacity = '0';
 }
 
-// Event Listeners voor de hover elementen
-document.getElementById('aboutp1').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/ff.png'));
+document.getElementById('aboutp1').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/ff.jpg'));
 document.getElementById('aboutp2').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/koffie.jpg'));
 document.getElementById('aboutp3').addEventListener('mouseenter', () => setCursor('https://bencebarens.nl/img/hva.jpg'));
 
-// Cursor verbergen als de muis weggaat
 document.querySelectorAll('#aboutp1, #aboutp2, #aboutp3').forEach(el => {
     el.addEventListener('mouseleave', hideCursor);
 });
