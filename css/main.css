@@ -39,10 +39,6 @@
     }
 }
 
-html{
-    scroll-snap-type: y proximity;
-}
-
 @media (prefers-color-scheme: light) {
     img[src$=".svg"] {
         filter: brightness(0) saturate(100%) invert(16%) sepia(16%) saturate(1254%) hue-rotate(156deg) brightness(95%) contrast(90%);
@@ -225,20 +221,22 @@ header .currentPage::after {
 @media screen and (max-width: 768px) {
     header{
         position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
         background-color: var(--color-secondary);
         color: var(--color-on-secondary);
-        bottom: 0;
-        width: 100%;
+        padding: 0.5rem;
+        bottom: 0.8rem;
+        border-radius: 50rem;
         z-index: 10;
-        padding-bottom: .7rem;
-        padding-top: .5rem;
-        flex-wrap: nowrap;
+        text-align: center;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 1.5rem;
     }
     
     header .currentPage::after{
         background-color: var(--color-primary);
-        bottom: 0.4rem;
+        bottom: 0.2rem;
+        position: absolute;
     }
 
     header nav ul li:first-child{
@@ -247,12 +245,11 @@ header .currentPage::after {
 
     header nav ul{
         gap: 0;
-        flex-wrap: nowrap;
-        margin: 1rem .5rem;
+        width: max-content;
     }
 
     header nav a{
-        padding: 1rem .7rem;
+        padding: 0.8rem;
     }
 }
 
@@ -344,6 +341,7 @@ footer button img{
 @media only screen and (max-width: 768px) {
     footer{
         padding-bottom: 3rem;
+        background-color: var(--color-tertiary);
     }
     
     footer>div{
@@ -667,8 +665,6 @@ footer button img{
         border: none;
         background-color: var(--color-secondary);
         margin-bottom: 2rem;
-        scroll-snap-stop: always;
-        scroll-snap-align: center;
     }
 
     .portfolio .label{
