@@ -61,6 +61,18 @@ window.addEventListener('scroll', () => {
     document.body.style.setProperty('--bg-offset', `${scrollY * -0.5}px`);
 });
 
+// GRADIENT BLOB -----------------------------------------------------------------------------------------
+
+var cursor = document.querySelector('.blob');
+
+if (cursor && getComputedStyle(cursor).display !== 'none') {
+    document.addEventListener('mousemove', function(e){
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50% - 50vw), calc(${e.clientY}px - 50% - 50vh), 0)`
+    });
+}
+
 // BACK BUTTON -------------------------------------------------------------------------------------------
 
 function goBack(fallbackUrl) {
@@ -73,3 +85,34 @@ function goBack(fallbackUrl) {
     location.href = fallbackUrl;
   }
 }
+
+// COLLAPS HEADER ON MOBILE -----------------------------------------------------------------------------
+
+const header = document.querySelector('header');
+
+let lastScrollY = window.scrollY;
+const threshold = 100;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < 0) return;
+
+    const delta = currentScrollY - lastScrollY;
+
+    if (Math.abs(delta) < threshold) return;
+
+    if (delta > 0) {
+        header.classList.add('collapsed');
+    } else {
+        header.classList.remove('collapsed');
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+header.addEventListener('click', () => {
+    if (header.classList.contains('collapsed')) {
+        header.classList.remove('collapsed');
+    }
+});
