@@ -33,6 +33,14 @@
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/contact" />
 </url>
 
+<!-- <url>
+	<loc>https://bencebarens.nl/archive/</loc>
+	<lastmod>2026-02-11T02:20:20+01:00</lastmod>
+	<priority>0.8</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/archive" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/archive" />
+</url> -->
+
 <url>
 	<loc>https://bencebarens.nl/design/365/</loc>
 	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
@@ -81,6 +89,38 @@
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/contact" />
 </url>
 
+<!-- <url>
+	<loc>https://bencebarens.nl/en/archive/</loc>
+	<lastmod>2026-02-11T02:20:20+01:00</lastmod>
+	<priority>0.6</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/archive" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/archive" />
+</url> -->
+
+<url>
+	<loc>https://bencebarens.nl/design/voices/</loc>
+	<lastmod>2025-05-01T02:20:22+01:00</lastmod>
+	<priority>0.6</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/voices" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/voices" />
+</url>
+
+<url>
+	<loc>https://bencebarens.nl/design/ricetta/</loc>
+	<lastmod>2025-05-01T02:20:22+01:00</lastmod>
+	<priority>0.6</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/ricetta" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/ricetta" />
+</url>
+
+<!-- <url>
+	<loc>https://bencebarens.nl/design/futureface/</loc>
+	<lastmod>2026-02-11T02:20:20+01:00</lastmod>
+	<priority>0.6</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/futureface" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/futureface" />
+</url> -->
+
 <url>
 	<loc>https://bencebarens.nl/en/design/365/</loc>
 	<lastmod>2025-05-01T02:20:20+01:00</lastmod>
@@ -97,28 +137,20 @@
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/transitmap" />
 </url>
 
+<!-- <url>
+	<loc>https://bencebarens.nl/en/design/futureface/</loc>
+	<lastmod>2026-02-11T02:20:20+01:00</lastmod>
+	<priority>0.4</priority>
+	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/futureface" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/futureface" />
+</url> -->
+
 <url>
 	<loc>https://bencebarens.nl/en/design/artbyant/</loc>
 	<lastmod>2025-12-27T02:20:20+01:00</lastmod>
 	<priority>0.4</priority>
 	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/artbyant" />
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/artbyant" />
-</url>
-
-<url>
-	<loc>https://bencebarens.nl/design/voices/</loc>
-	<lastmod>2025-05-01T02:20:22+01:00</lastmod>
-	<priority>0.6</priority>
-	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/voices" />
-	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/voices" />
-</url>
-
-<url>
-	<loc>https://bencebarens.nl/design/ricetta/</loc>
-	<lastmod>2025-05-01T02:20:22+01:00</lastmod>
-	<priority>0.6</priority>
-	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/ricetta" />
-	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/ricetta" />
 </url>
 
 <url>
