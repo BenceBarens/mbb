@@ -19,11 +19,25 @@ main{
     }
 }
 
-#detail2{
+#detail12{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+#detail12 div{
+    border-radius: 2rem;
     background-color: var(--color-ffblack);
     color: var(--color-ffwhite);
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+}
+
+#detail2{
+    color: var(--color-ffwhite);
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +61,7 @@ main{
 #detail2 h2{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
-    font-size: calc(2vw + 4rem);
+    font-size: 5.5rem;
     color: #cffcff;
     background-image: linear-gradient(135deg, var(--color-ffmint) 0%, var(--color-ffblue) 50%, var(--color-ffpink) 100%);
     background-clip: text;
@@ -86,10 +100,65 @@ main{
     #detail2 div img{
         display: none;
     }
+
+    #detail2 h2{
+        font-size: 4rem;
+    }
 }
 
 #detail3{
-    background-color: var(--color-ffblack);
     color: var(--color-ffwhite);
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#detail3 img{
+    border-radius: 1rem;
+    width: 100%;
+}
+
+#detail3 figure{
+    width: 40rem;
+    max-width: 40%;
+}
+
+#detail3 p{
+    max-width: 35rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #detail3{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #detail3 figure{
+        min-width: 20rem;
+        max-width: 95%;
+    }
+}
+
+#detail4{
+    padding: 2rem;
+    display: grid;
+    grid-template: auto auto / auto fit-content(35rem);
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #detail4{
+        grid-template: auto / auto;
+    }
+}
+
+#detail4 img{
+    filter: none;
+    width: 100%;
+    max-width: 20rem;
+    justify-self: end;
 }
