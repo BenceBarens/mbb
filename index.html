@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bence Barens</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/splash.css">
     <link rel="icon" type="image/png" href="https://bencebarens.nl/img/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="https://bencebarens.nl/img/favicon/favicon.svg">
     <link rel="shortcut icon" href="https://bencebarens.nl/img/favicon/favicon.ico">
@@ -23,7 +24,7 @@
     <meta property="og:locale:alternate" content="en_UK">
     <meta property="og:url" content="https://bencebarens.nl/">
 </head>
-<body class="home">
+<body class="home" id="body">
 <header>
     <nav>
         <ul>
@@ -39,13 +40,43 @@
     </div>
 </header>
 
+<div id="intro-overlay" aria-hidden="true">
+    <div class="intro-content">
+        <p class="intro-text">
+            <span>Hi</span><span class="wipe"><span>, ik ben Bence</span></span>
+        </p>
+    </div>
+</div>
+
+<script>
+(function() {
+    const overlay = document.getElementById('intro-overlay');
+    const hasSeenIntro = sessionStorage.getItem('introSeen');
+    const isInternal = document.referrer.includes(window.location.hostname);
+
+    if (!hasSeenIntro && !isInternal) {
+        overlay.classList.add('is-active');
+        
+        document.body.classList.add('no-scroll');
+
+        setTimeout(() => {
+        overlay.classList.add('is-closing');
+        sessionStorage.setItem('introSeen', 'true');
+        
+        document.body.classList.remove('no-scroll');
+        
+        setTimeout(() => overlay.remove(), 1100);
+        }, 2800);
+    } else {
+        overlay.remove();
+        sessionStorage.setItem('introSeen', 'true');
+        document.body.classList.remove('no-scroll');
+    }
+})();
+</script>
+
 <main>
-    <section class="splash">
-        <div><img src="img/pol1.jpg" class="draggable" alt="Een close-up portret van Bence die in de camera kijkt en met zijn handen een kader vormt. Hij staat buiten in een natuurlijke omgeving."><img src="img/pol2.jpg" class="draggable" alt="Een halflang portret van Bence die met gekruiste armen naar links kijkt. Hij staat buiten in een natuurlijke omgeving."></div>
-        <h1><span>Hi, ik ben Bence en</span> ik creëer visuele<br>identiteiten voor kleine bedrijven en<br>projecten <span>om ze groots te maken.</span></h1>
-        <script src="js/polaroid.js"></script>
-    </section>
-    <section class="splash-mobile">
+    <section id="home1">
         <div><img src="img/pol1.jpg" class="draggable" alt="Een close-up portret van Bence die in de camera kijkt en met zijn handen een kader vormt. Hij staat buiten in een natuurlijke omgeving."><img src="img/pol2.jpg" class="draggable" alt="Een halflang portret van Bence die met gekruiste armen naar links kijkt. Hij staat buiten in een natuurlijke omgeving."></div>
         <h1><span>Hi, ik ben Bence en</span> ik creëer visuele identiteiten voor kleine bedrijven en projecten <span>om ze groots te maken.</span></h1>
         <a href="#home2" tabindex="-1"><img src="https://bencebarens.nl/img/arrow.svg" alt=""></a>
@@ -128,5 +159,6 @@
 </footer>
 <div class="blob"></div>
 <script src="js/main.js"></script>
+<script src="js/polaroid.js"></script>
 </body>
 </html>
