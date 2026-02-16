@@ -185,7 +185,7 @@ button{
 ::selection {
     background: var(--color-tertiary);
     color: var(--color-on-tertiary);
-    text-shadow: var(--color-on-tertiary) 0 0 1rem;
+    text-shadow: var(--color-on-tertiary) 0 0 0.8rem;
 }
 
 footer ::selection {
@@ -293,6 +293,7 @@ header .currentPage::after {
         background-color: var(--color-on-secondary);
         bottom: -0.3rem;
         position: absolute;
+        opacity: 1;
     }
 
     header nav ul li:first-child{
@@ -323,9 +324,12 @@ header .currentPage::after {
     header.collapsed nav .currentPage{
         width: auto;
         opacity: 1;
-        padding: 0 0.6rem 0.4rem 0.6rem;
-        margin:  -0.2rem 0;
+        padding: 0 0.6rem;
         color: var(--color-on-secondary);
+    }
+
+    header.collapsed nav .currentPage::after{
+        opacity: 0;
     }
 
     header *{
@@ -458,19 +462,25 @@ footer button img{
 
 /*HOME---------------------------------------------------------------------------------------------*/
 
-.home .splash {
+#home1 {
     display: flex;
     align-items: center;
     justify-content: center;
     background: none;
     min-height: 100vh;
     flex-direction: column;
+    padding: 0 5rem;
 }
 
 .draggable{
     user-select: none;
     cursor: var(--cursor-grab);
     filter: drop-shadow(0.5rem 0.5rem 1rem rgba(32, 52, 62, 0.3));
+    width: 12rem;
+    border: 0.8rem solid var(--color-white);
+    border-bottom: 3.5rem solid var(--color-white);
+    transition: all 100ms ease;
+    z-index: 1;
 }
 
 .draggable:active{
@@ -483,60 +493,25 @@ footer button img{
 .draggable:nth-child(1):hover { transform: rotate(-6deg); }
 .draggable:nth-child(2):hover { transform: rotate(7deg); }
 
-.home .splash h1 {
-    font-size: calc(5vw + 1rem);
-    font-size: min(calc(5vw + 1rem), 6vw);
+#home1 h1{
+    font-size: clamp(3rem, 6vw, 7rem);
     line-height: 1.1;
     display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    height: auto;
-    max-width: 100%;
+    max-width: 150rem;
     text-align: center;
 }
 
-.home .splash span, .home .splash-mobile span {
+#home1 span{
     color: var(--color-tertiary);
     display: inline;
 }
 
-.home .splash img{
-    width: 12rem;
-    border: 0.8rem solid var(--color-white);
-    border-bottom: 3.5rem solid var(--color-white);
-    transition: all 100ms ease;
-}
-
-.home .splash div{
+#home1 div:first-child{
     margin-top: 0rem;
     margin-bottom: -1rem;
 }
 
-.home .splash-mobile{
-    display: none;
-    background: none;
-    min-height: 90vh;
-    align-self: center;
-    align-items: center;
-    padding: 0 1.5rem;
-    text-align: center;
-}
-
-.home .splash-mobile h1{
-    font-size: 3rem;
-}
-
-.home .splash-mobile div img{
-    user-select: none;
-    width:8rem;
-    height: 8rem;
-    cursor: var(--cursor-grab);
-    filter: drop-shadow(12px 10px 18px rgba(0, 0, 0, 0.3));
-    border: 0.7rem solid var(--color-white);
-    border-bottom: 2.7rem solid var(--color-white);
-}
-
-.home .splash-mobile > a img{
+#home1 a img:last-of-type{
     width: 5rem;
     transform: rotate(90deg);
 }
@@ -579,25 +554,35 @@ footer button img{
     margin: auto;
 }
 
-@media only screen and (max-width: 768px) {
-    .home .splash {
+@media only screen and (min-width: 768px) {
+    #home1 a img:last-of-type{
         display: none;
     }
+}
 
-    .home .splash-mobile{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+@media only screen and (max-width: 768px) {
+    .draggable{
+        width: 8rem;
     }
 
-    .home .splash-mobile div{
+    #home1{
+        padding: 0 2rem;
+    }
+
+    .draggable:nth-child(1) { transform: rotate(-4deg); align-self: flex-start;}
+    .draggable:nth-child(2) { transform: rotate(5deg); align-self: flex-end;}
+
+    .draggable{
+        border: 0.7rem solid;
+        border-bottom: 2.7rem solid;
+        pointer-events: none;
+    }
+
+    #home1 div:first-child{
+        display: flex;
         height: 15rem;
-        display: flex;
+        margin-bottom: 1rem;
     }
-
-    .draggable:nth-child(2) { align-self: flex-end; }
-    .draggable:nth-child(1) { transform: rotate(-4deg); }
-    .draggable:nth-child(2) { transform: rotate(5deg); }
 
     #home2 p{
         font-size: 1rem;
@@ -1152,7 +1137,7 @@ input:focus, textarea:focus{
 }
 
 @media only screen and (min-width: 768px) {
-    canvas {
+    .error404 canvas {
         margin: 1rem;
         border-radius: 2rem;
         max-height: 85vh;
