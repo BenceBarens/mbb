@@ -53,19 +53,19 @@
     const overlay = document.getElementById('intro-overlay');
     const hasSeenIntro = sessionStorage.getItem('introSeen');
     const isInternal = document.referrer.includes(window.location.hostname);
+    
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (!hasSeenIntro && !isInternal) {
+    if (!hasSeenIntro && !isInternal && !prefersReducedMotion) {
         overlay.classList.add('is-active');
-        
         document.body.classList.add('no-scroll');
 
         setTimeout(() => {
-        overlay.classList.add('is-closing');
-        sessionStorage.setItem('introSeen', 'true');
-        
-        document.body.classList.remove('no-scroll');
-        
-        setTimeout(() => overlay.remove(), 1100);
+            overlay.classList.add('is-closing');
+            sessionStorage.setItem('introSeen', 'true');
+            document.body.classList.remove('no-scroll');
+            
+            setTimeout(() => overlay.remove(), 1100);
         }, 2800);
     } else {
         overlay.remove();
