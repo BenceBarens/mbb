@@ -64,7 +64,7 @@ body::after{
     background-image: radial-gradient(var(--color-on-primary) 0.05rem, transparent 0.05rem);
     background-size: 2rem 2rem;
     background-repeat: repeat;
-    opacity: 0.3;
+    opacity: 0.35;
     pointer-events: none;
     background-position: 0 var(--bg-offset);
 }
@@ -573,8 +573,8 @@ footer button img{
     .draggable:nth-child(2) { transform: rotate(5deg); align-self: flex-end;}
 
     .draggable{
-        border: 0.7rem solid;
-        border-bottom: 2.7rem solid;
+        border: 0.7rem solid var(--color-white);
+        border-bottom: 2.7rem solid var(--color-white);
         pointer-events: none;
     }
 
