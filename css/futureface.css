@@ -162,3 +162,29 @@ main{
     max-width: 20rem;
     justify-self: end;
 }
+
+#detail5{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#detail5 div {
+    width: 100%;
+    max-width: 65rem;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+}
+
+#detail5 img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
