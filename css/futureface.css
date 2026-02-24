@@ -26,6 +26,8 @@ main{
     overflow: hidden;
     padding: 0.5rem;
     gap: 1rem;
+    max-width: 110rem;
+    margin: auto;
 }
 
 #detail12 div{
@@ -153,6 +155,7 @@ main{
 @media only screen and (max-width: 768px) {
     #detail4{
         grid-template: auto / auto;
+        gap: 2rem;
     }
 }
 
@@ -186,5 +189,11 @@ main{
 }
 
 @media only screen and (max-width: 768px) {
+    #detail5{
+        gap: 1rem;
+    }
 
+    #detail5 div {
+        grid-auto-flow: row;
+    }
 }
