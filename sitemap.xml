@@ -113,13 +113,13 @@
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/ricetta" />
 </url>
 
-<!-- <url>
+<url>
 	<loc>https://bencebarens.nl/design/futureface/</loc>
 	<lastmod>2026-02-11T02:20:20+01:00</lastmod>
 	<priority>0.6</priority>
 	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/futureface" />
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/futureface" />
-</url> -->
+</url>
 
 <url>
 	<loc>https://bencebarens.nl/en/design/365/</loc>
@@ -137,13 +137,13 @@
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/transitmap" />
 </url>
 
-<!-- <url>
+<url>
 	<loc>https://bencebarens.nl/en/design/futureface/</loc>
 	<lastmod>2026-02-11T02:20:20+01:00</lastmod>
 	<priority>0.4</priority>
 	<xhtml:link rel="alternate" hreflang="nl" href="https://bencebarens.nl/design/futureface" />
 	<xhtml:link rel="alternate" hreflang="en" href="https://bencebarens.nl/en/design/futureface" />
-</url> -->
+</url>
 
 <url>
 	<loc>https://bencebarens.nl/en/design/artbyant/</loc>
