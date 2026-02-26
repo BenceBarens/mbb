@@ -13,25 +13,28 @@ main{
     padding: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
-    main{
-        padding: 1rem;
-    }
-}
-
 #detail12{
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
     overflow: hidden;
-    padding: 0.5rem;
-    gap: 1rem;
+    gap: 0.5rem;
     max-width: 110rem;
     margin: auto;
 }
 
+@media only screen and (max-width: 768px) {
+    main{
+        padding: 0.5rem;
+    }
+
+    #detail1{
+        padding: 1rem;
+    }
+}
+
 #detail12 div{
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color: var(--color-ffblack);
     color: var(--color-ffwhite);
     font-family: "Atkinson Hyperlegible", sans-serif;
