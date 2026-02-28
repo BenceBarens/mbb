@@ -190,8 +190,11 @@ main{
 
 #ant5 img{
     width: 100%;
-    border-radius: 1rem;
-    border: 0.1rem solid #e4cb16;
+    border-radius: 0.5rem;
+}
+
+#ant5 div:first-child img{
+    border: 0.05rem solid #e4cb16;
 }
 
 @media only screen and (max-width: 768px) {
