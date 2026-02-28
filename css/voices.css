@@ -2,8 +2,7 @@
     text-align: center;
     overflow: auto;
     white-space: nowrap;
-    margin-left: -2rem;
-    margin-right: -2rem;
+    border-radius: 1rem;
 }
 
 p{
